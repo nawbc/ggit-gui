@@ -1,0 +1,170 @@
+$borderColor: #404040;
+
+@mixin defaultFont{
+    font-size: 0.15rem;
+    font-weight: bold;
+}
+
+@mixin font_med{
+    font-size: 18px;
+    font-weight: bold;
+}
+@mixin font_max{
+    font-size: 33px;
+    font-weight: bold;
+}
+
+@mixin flexHCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin flexVCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin  dark {
+    background-color: #1f2430;
+}
+@mixin light {
+    background-color: #fff;
+}
+@mixin deepDark {
+    color: #999;
+    background-color: #191e2a;
+}
+@mixin box($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin border{
+    border: 0.02rem solid $borderColor;
+}
+@mixin clear {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+@mixin animation($argv) {
+    -webkit-animation: $argv;
+    -ms-animation: $argv;
+    -o-animation: $argv;
+    -moz-animation: $argv;
+}
+
+@mixin transform($argv) {
+    -webkit-transform: $argv;
+    -ms-transform: $argv;
+    -o-transform: $argv;
+    -moz-transform: $argv;
+}
+
+@mixin transition($argv) {
+    -webkit-transition: $argv;
+    -ms-transition: $argv;
+    -o-transition: $argv;
+    -moz-transition: $argv;
+}
+
+@mixin iconBtn {
+    -webkit-transition-delay: 0.7s;
+    -ms-transition-delay: 0.7s;
+    -o-transition-delay: 0.7s;
+    -moz-transition-delay: 0.7s;
+    transition: 0.7s;
+}
+
+@mixin filter($argv) {
+    -webkit-filter: $argv;
+    -o-filter: $argv;
+    -moz-filter: $argv;
+    -ms-filter: $argv;
+    filter: $argv;
+}
+
+@mixin posCenter($width, $height) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    margin: {
+        left: -$width;
+        top: -$height;
+    }
+}
+
+@mixin btn-down {
+    &:hover {}
+    &:active {
+        position: relative;
+        top: 3px;
+    }
+}
+
+@mixin btn-scale($num) {
+    &:hover {}
+    &:active {
+        @include transform(scale($num,$num));
+    }
+}
+
+@mixin btn($color) {
+    outline: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #fff;
+    font-family: $font-cn;
+    @include box(80px, 30px);
+    background: $color;
+    border: none;
+}
+
+@mixin  button {
+    @include box(6vw, 6vh);
+    @include btn-down;
+    @include border;
+    border-radius: 2px;
+    outline: none;
+    font-weight: bold;
+}
+
+@mixin testBorder{
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+
+@mixin backgroundImageLinear($color...){
+    background: -webkit-linear-gradient($color);
+    background: -moz-linear-gradient($color);
+    background: -ms-linear-gradient($color);
+    background: -o-linear-gradient($color);
+    background: linear-gradient($color);
+}
+
+@mixin icon($url){
+    background: url($url);
+    background-size: cover;
+}
+
+@mixin opacity($val){
+    opacity: $val;
+    -webkit-opacity: $val;
+    -ms-opacity: $val;
+    -o-opacity: $val;
+    -moz-opacity: $val;
+}
+@mixin btn-click{
+    &:hover{
+        @include transform(scale(1.2));
+    }
+    &:active{
+        @include transform(scale(0.8));
+    }
+}

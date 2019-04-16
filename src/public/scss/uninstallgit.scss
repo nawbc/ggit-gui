@@ -1,0 +1,22 @@
+@import './mixin.scss';
+@import './footer.scss';
+
+html,body{
+    @include box(100%,100%);
+    .no-git{
+        @include box(400px,300px);
+        @include posCenter(200px,150px);
+        text-align: center;
+        section{
+            font-size: 0.3rem;
+            line-height: 100px;
+        }
+        span{
+            font-size: 0.12rem;
+        }
+    }
+    footer{
+        font-size: 0.11rem;
+        position: absolute;
+    }
+}

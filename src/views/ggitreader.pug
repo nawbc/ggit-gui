@@ -1,0 +1,32 @@
+extends layout
+
+block indexHeader
+    link(rel="stylesheet", href="../css/font.css")
+    link(rel="stylesheet", href="../css/markdownstyle.css")
+    link(rel="stylesheet", href="../css/ggitreader.css")
+    link(rel="shortcut icon", href="../asset/20181203205633.png")
+
+block scriptLib_jq
+    script(src='../javascripts/libs/jquery.min.js')
+    script(src='../javascripts/libs/flex.js')
+    script(src="../javascripts/utils.js" type="text/javascript")
+    script(src='../javascripts/libs/highlight.pack.js')
+    
+
+block mainContainer
+    main
+        div.tinyDisplay
+            div.tinyContainer
+                div.tinyWrapper
+        div.markdownDisplay
+            div.markdownDisplayContainer
+                div.markdownDisplayWrapper
+                    pre
+                        code
+block scriptLocalLib
+    script(src="../javascripts/fsView.js" type="text/javascript")
+    script(src="../javascripts/switchLang.js" type="text/javascript")
+    script(src="../javascripts/ggitReader/index.js" type="text/javascript")
+block footer
+    include includes/footer.pug
+    

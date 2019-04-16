@@ -1,0 +1,353 @@
+@import './mixin.scss';
+@import './animations.scss';
+
+.light {
+    @include light;
+}
+
+// 黑夜主题
+.dark {
+    @include dark;
+}
+
+//底部通知
+#mrInform {
+    z-index: 20;
+    position: fixed;
+    right: 50px;
+    bottom: 20px;
+    width: 20vw;
+    padding: 15px 0px;
+    @include border;
+    @include animation(mrInform 600ms ease);
+    background-color: #fff;
+    font-size: 0.15rem;
+    font-weight: bold;
+    word-wrap: break-word;
+    display: none;
+
+    .informWrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        @include box(100%, 100%);
+
+        .informIcon {
+            display: inline-block;
+            @include box(3vw, 3vw);
+            @include icon('../asset/icons/notification.svg');
+        }
+
+        span {
+            width: 10vw;
+            text-align: center;
+        }
+
+        .warning {
+            @include icon('../asset/icons/warning.svg');
+        }
+    }
+}
+
+// 弹出框
+#ggitPopup {
+    @include posCenter(20vw, 30vh);
+    @include box(40vw, 60vh);
+    z-index: 20;
+    @include border;
+    background: #fff;
+    border-radius: 5px;
+    @include animation(ggitPopup .6s ease);
+    opacity: 1;
+    display: none;
+
+    .popCancel {
+        @include box(3vw, 3vw);
+        position: absolute;
+        right: 3px;
+        top: 3px;
+        @include icon('../asset/icons/cancel.svg');
+        @include transition(all 0.3s);
+
+        &:hover {
+            @include transform(rotate(90deg));
+        }
+    }
+
+    .cloneStatus {
+        @include box(15vw, 10vh);
+        font-size: 0.17rem;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        left: 50%;
+        margin-left: -7.5vw;
+
+        div {
+            @include box(3vw, 3vw);
+            @include icon('../asset/icons/hourglass.svg');
+            @include animation(hourglass 2s infinite linear);
+        }
+    }
+
+    .popContainer {
+        @include box(30vw, 36vh);
+        @include posCenter(15vw, 18vh);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        // 克隆弹出框
+        .clonePTag {
+            @include box(25vw, 7vh);
+            line-height: 7vh;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.16rem;
+            font-weight: bold;
+
+            .cloneRepo {
+                @include border;
+                @include box(17vw, 6vh);
+                outline: none;
+                padding-left: 5px;
+                font-size: 0.15rem;
+            }
+        }
+        // 管理branch
+        .branch_popup{
+            @include box(20vw, 25vh);
+            display: flex;
+            @include  flexHCenter;
+            .current_branch{
+                @include defaultFont;
+            }
+            .other_branch{
+                @include defaultFont;
+                select{
+                    @include border;
+                    font-size: 0.15rem;
+                    @include box(8vw, 6vh);
+                    outline: none;
+                    border-radius: 5px;
+                }
+            }
+        }
+
+        //  ggitReader
+        .ggitReader{
+            display: flex;
+            .selectBlock{
+                @include box(13vw, 36vh);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                div:nth-child(1){
+                    font-size: 0.13rem;
+                    font-weight: bold;
+                }
+                .selectBlockContainer{
+                    li{
+                        font-size: 0.10rem;
+                        font-weight: bold;
+                        list-style: none;
+                        margin-top: 10px;
+                        text-align: center;
+                        line-height: 4vh;
+                        @include box(10vw, 4vh);
+                        @include transition(all 500ms ease);
+                        &:hover{
+                            background-color: #ebebeb;
+                        }
+                    }
+                }
+            }
+            .requestBlock{
+                @include box(17vw, 36vh);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                div:nth-child(1){
+                    font-size: 0.13rem;
+                    font-weight: bold;
+                }
+                .addingNative{
+                    font-size: 0.10rem;
+                    font-weight: bold;
+                }
+                p{
+                    input{
+                        @include border;
+                        @include box(15vw, 4vh);
+                        font-size: 0.13rem;
+                        padding-left: 5px;
+                    }
+                }
+                .native_button{
+                    @include button;
+                    font-size: 0.16rem;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        // create new  textarea
+        .textarea_a {
+            @include box(25vw, 10vh);
+            @include border;
+            resize: none;
+            padding-left: 5px;
+            font-size: 0.16rem;
+            font-weight: bold;
+        }
+
+        // .gitignore textarea
+        .textarea_b {
+            @extend .textarea_a;
+            @include box(25vw, 20vh);
+        }
+
+        // git commit textarea
+        .textarea_c {
+            @extend .textarea_a;
+            @include box(25vw, 20vh);
+        }
+        
+        .textarea_d{
+            @extend .textarea_a;
+        }
+        
+        // gitignore gitattribute  select
+        .select_a {
+            @include border;
+            font-size: 0.15rem;
+            @include box(8vw, 6vh);
+            outline: none;
+            border-radius: 5px;
+        }
+
+        // 设置 gitignore 按钮
+        .config_a {
+            @include border;
+            font-size: 0.15rem;
+            @include box(6vw, 6vh);
+            border-radius: 5px;
+            outline: none;
+            @include btn-down;
+        }
+        // 创建仓库 按钮
+        .repo_button {
+            @include button;
+            font-size: 0.16rem;
+            font-weight: bold;
+        }
+        .create_branch{
+            @include button;
+            font-size: 0.13rem;
+            font-weight: bold;
+        }
+
+        // message辅助条
+        .helpBar {
+            @include box(25vw, 5vh);
+            @include border;
+            overflow: hidden;
+
+            div {
+                @include box(28vw, 8vh);
+                overflow-x: auto;
+
+                ul {
+                    @include box(100vw, 5vh);
+
+                    li {
+                        list-style: none;
+                        text-align: center;
+                        line-height: 4.5vh;
+                        @include box(7vw, 5vh);
+                        @include btn-down;
+                        float: left;
+                        font-weight: bold;
+                        font-size: 0.12rem;
+                    }
+                }
+            }
+
+            // helpbar left  button
+            .icon_l {
+                @include box(5vh, 5vh);
+                @include icon('../asset/icons/left-square.svg');
+                position: absolute;
+                top: 1vh;
+                left: 0;
+            }
+
+            // helpbar right button
+            .icon_r {
+                @include box(5vh, 5vh);
+                @include icon('../asset/icons/right-s.svg');
+                position: absolute;
+                top: 1vh;
+                right: 0;
+            }
+        }
+        // 提交commit message 按钮
+        .commit_button {
+            @include button;
+            font-size: 0.16rem;
+            font-weight: bold;
+        }
+        // 克隆按钮
+        .clone_button {
+            @include button;
+            font-size: 0.16rem;
+            font-weight: bold;
+        }
+        // 黑暗主题
+        .dark {
+            @include dark;
+        }
+        // 选择语言 
+        .selectLanguage {
+            @include box(30vw, 36vh);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+            section {
+                font-size: 0.2rem;
+                font-weight: bold;
+            }
+
+            div {
+                @include box(20vw, 15vh);
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+
+                input {
+                    @include box(8vw, 7vh);
+                    font-size: 0.17rem;
+                    font-weight: bold;
+                    background-color: #fff;
+                    outline: none;
+                    border: none;
+                    @include btn-down;
+                }
+            }
+        }
+    }
+}
+
+#ggitPopup.dark {
+    @include dark;
+}
+
+#mrInform.deepdark {
+    @include deepDark;
+}

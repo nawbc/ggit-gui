@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        block indexHeader
+        block scriptLib_jq
+        title=webSiteTitle
+        style.
+            *{
+                    margin: 0;padding: 0;font-family: youyuan; user-select: none;
+                }
+                .tempSaveVal{
+                    user-select: all;
+                    position: absolute;
+                    top: -200vw;
+                }
+    body(class='light' style="position:relative;box-sizing: border-box;width: 100vw;height: 100vh;overflow: hidden")
+        div.d.mrInform#mrInform: div.informWrapper
+            div.icon.informIcon
+            span
+        div.menuBtn
+        input(class='tempSaveVal')
+        include includes/ggitPopup.pug
+        block mainContainer
+        block footer
+        block menu
+        block scriptLocalLib
+        

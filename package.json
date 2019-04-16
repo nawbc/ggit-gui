@@ -1,0 +1,35 @@
+{
+  "name": "ggit-npm-tool",
+  "version": "1.0.23-alpha0.24",
+  "update": "2019/2/8",
+  "description": "git的轻量化gui工具",
+  "main": "index.js",
+  "title": "GGit -- git 轻量图形化工具 by nodejs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "supervisor -- index.js start",
+    "dev": "node ./build/bin/www.js",
+    "scss": "sass --watch src/public/scss:src/public/css"
+  },
+  "bin": {
+    "ggit": "index.js"
+  },
+  "author": "wanghan",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "cheerio": "^1.0.0-rc.2",
+    "consolidate": "^0.15.1",
+    "express": "^4.16.4",
+    "highlight.js": "^9.14.2",
+    "markdown-it": "^8.4.2",
+    "pug": "^2.0.3",
+    "request": "^2.88.0"
+  },
+  "homepage": "https://github.com/sewerganger",
+  "bugs": "https://github.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sewerganger"
+  }
+}

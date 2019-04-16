@@ -1,0 +1,196 @@
+$borderColor: #404040;
+
+
+@import './mixin.scss';
+@import './footer.scss';
+@import './menu.scss';
+
+main{
+
+    overflow: hidden;
+    position: relative;
+    @include box (100vw,90vh);
+    // ggit header部分
+    .ggit_logo{
+        position: relative;
+        @include box( 60vw, 20vh);
+
+        .logo_wrapper{
+
+            @include box(20vw, 20vh);
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            .profile_wrapper{
+                
+                @include animation(logo_translate 900ms ease);
+                @include box(6vw, 6vw);
+                position: absolute;
+                left: 4vw;
+                bottom: 10px;
+                .profile{
+                    @include box(6vw, 6vw);
+                    @include icon('../asset/20181203205633.png');
+                    display: inline-block;
+                    border-radius: 100%;
+                    @include animation(logo_rotate 900ms ease);
+                }
+            }
+            span{
+                font-size: 0.4rem;
+                user-select: none;
+                font-weight: bold;
+                position: absolute;
+                bottom: 0px;
+                left: 10vw;
+            }
+        }
+        //ggit 设置
+        .ggitSetting{
+
+            position: absolute;
+            bottom: 0;right: 0;
+            @include box(50%, 3vw);
+            ul{
+                @include box(100%, 100%);
+                display: flex;
+                justify-content: space-around;
+                li{
+                    list-style: none;
+                    @include box(3vw, 3vw);
+                    @include transition(all 300ms);
+                    @include btn-click;
+                }
+                li:nth-child(1){
+                    @include icon('../asset/icons/bulb.svg');
+                }
+                li.darkBulb{
+                    @include icon('../asset/icons/darkbulb.svg');
+                }
+                li.trash{
+                    @include icon('../asset/icons/delete.svg');
+                }
+                li.scheduleTask{
+                    @include icon('../asset/icons/canlendar.svg');
+                }
+                li.b{
+                    @include icon('../asset/icons/pushpin.svg');
+                }
+            }
+        }
+    }
+
+    //操作区 
+    .operateArea{
+        @include box(40vw, 90vh);
+        overflow: hidden;
+        position: absolute;
+        top: 0px;right: 0px;
+        .operateContainer{
+            overflow-x: auto;
+            @include box(43vw, 100%);
+            .operateWrapper{
+                @include box(40vw, 90vh);
+                position: relative;
+                @import 'operate.scss';
+            }
+        }        
+    }
+
+
+    // 功能列表
+    .listContainer{
+        @include box( 60vw, 70vh);
+        ul.function_lists{
+            @include box(95%,100%);
+            padding-left: 3vw;
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-around;
+
+            .block{
+                @include box(17vw,20vh);
+                border-radius: 15px;
+                @include border;
+                background-color:#fafafa;
+                font-size: 20px;
+                @include  btn-down;
+                position: relative;
+                .status_block{
+                    @include box(4vw, 2vh);
+                    
+                    position: absolute;
+                    left: 5px;top: 5px;
+                    li{
+                        margin-right: 2px;
+                        @include box(0.4vw, 0.4vw);
+                        @include border;
+                        border-radius: 0.5vw;
+                        list-style: none;
+                        float: left;
+                    }
+                    &:after{
+                        @include clear;
+                    }
+                    li:nth-child(1){
+                        // background-color: #fff;                        
+                        background-color: #55fa08;
+                    }
+                    li:nth-child(2){
+                        background-color: #fa0808;
+                    }
+                    li:nth-child(3){
+                        // background-color: #fff;
+                        background-color: #08d6fa;
+                    }
+                }
+                
+                .function_title{
+
+                    @include box(15vw, 10vh);
+                    @include posCenter(7.5vw, 5vh);
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    .baseIcon{
+                        display: inline-block;
+                        @include box(3.5vw, 3.5vw);
+                    }
+                    .function_name{
+                        display: inline-block;
+                        font-size: 0.17rem;
+                        font-weight: bold;
+                        text-align: center;
+                    }
+                    .function_icon1{
+                        @include icon('../asset/icons/folder-add.svg');
+                    }
+                    .function_icon2{
+                        @include icon('../asset/icons/snippets.svg');
+                    }
+                    .function_icon3{
+                        @include icon('../asset/icons/hdd.svg');
+                    }
+                    .function_icon4{
+                        @include icon('../asset/icons/setting.svg');
+                    }
+                    .function_icon5{
+                        @include icon('../asset/icons/save.svg');
+                    }
+                    .function_icon6{
+                        @include icon('../asset/icons/book.svg');
+                    }   
+                }
+            }
+            .deepdark{
+                @include deepDark;
+            }
+
+
+        }
+    }
+}
+
+@import './animations.scss';

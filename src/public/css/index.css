@@ -1,0 +1,763 @@
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 10vh; }
+  footer div.introduction {
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -7vw;
+    margin-top: -4.5vh;
+    width: 14vw;
+    height: 9vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    -webkit-transition: background 0.6s ease;
+    -ms-transition: background 0.6s ease;
+    -o-transition: background 0.6s ease;
+    -moz-transition: background 0.6s ease; }
+    footer div.introduction a {
+      text-decoration: none;
+      color: #242424; }
+      footer div.introduction a p {
+        font-size: 0.21rem;
+        font-weight: bold; }
+      footer div.introduction a span {
+        font-size: 0.1rem; }
+    footer div.introduction:hover {
+      background: #ebebeb; }
+
+.menuBtn {
+  width: 3vw;
+  height: 3vw;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 12;
+  -webkit-transition: transform 600ms ease;
+  -ms-transition: transform 600ms ease;
+  -o-transition: transform 600ms ease;
+  -moz-transition: transform 600ms ease;
+  background: url("../asset/icons/left-square.svg");
+  background-size: cover; }
+
+.menuBtnOut {
+  background: url("../asset/icons/profile.svg");
+  background-size: cover;
+  -webkit-transform: translateX(-25vw);
+  -ms-transform: translateX(-25vw);
+  -o-transform: translateX(-25vw);
+  -moz-transform: translateX(-25vw); }
+
+.menuList {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+  width: 25vw;
+  height: 100vh;
+  background-color: #fafafa;
+  border: 0.02rem solid #404040;
+  -webkit-transition: transform 600ms ease;
+  -ms-transition: transform 600ms ease;
+  -o-transition: transform 600ms ease;
+  -moz-transition: transform 600ms ease;
+  -webkit-transform: translateX(40vw);
+  -ms-transform: translateX(40vw);
+  -o-transform: translateX(40vw);
+  -moz-transform: translateX(40vw); }
+  .menuList .menuContainer {
+    width: 15vw;
+    height: 50vh;
+    margin: 5vh auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column; }
+    .menuList .menuContainer li {
+      list-style: none;
+      height: 7vh;
+      text-align: center;
+      line-height: 7vh;
+      font-size: 0.17rem;
+      font-weight: bold;
+      box-sizing: border-box;
+      -webkit-transition: all 200ms ease;
+      -ms-transition: all 200ms ease;
+      -o-transition: all 200ms ease;
+      -moz-transition: all 200ms ease; }
+      .menuList .menuContainer li a {
+        text-decoration: none;
+        color: #999; }
+      .menuList .menuContainer li:active {
+        -webkit-transform: translateX(8px);
+        -ms-transform: translateX(8px);
+        -o-transform: translateX(8px);
+        -moz-transform: translateX(8px); }
+  .menuList .aboutAuthor {
+    width: 10vw;
+    height: 8vh;
+    -webkit-transition: all 0.6s;
+    -ms-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -5vw; }
+    .menuList .aboutAuthor .aboutWrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around; }
+      .menuList .aboutAuthor .aboutWrapper:hover {
+        border-bottom: 4px solid #404040; }
+      .menuList .aboutAuthor .aboutWrapper .authorIcon {
+        width: 3vw;
+        height: 3vw;
+        background: url("../asset/icons/idcard.svg");
+        background-size: cover;
+        display: inline-block; }
+      .menuList .aboutAuthor .aboutWrapper span {
+        font-size: 0.16rem;
+        font-weight: bold; }
+  .menuList .aboutApp {
+    margin-top: 50px; }
+    .menuList .aboutApp li {
+      font-size: 0.14rem;
+      text-align: center;
+      width: 100%;
+      height: 8vh;
+      list-style: none;
+      font-weight: bold;
+      word-wrap: break-word; }
+      .menuList .aboutApp li span:nth-child(1) {
+        width: 30%; }
+      .menuList .aboutApp li span:nth-child(2) {
+        width: 70%; }
+  .menuList #backBtn {
+    font-weight: bold;
+    -webkit-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    width: 3.5vw;
+    height: 4vh;
+    text-align: center;
+    line-height: 4vh;
+    font-size: 0.15rem;
+    border: 0.02rem solid #404040;
+    position: absolute;
+    right: 20px; }
+    .menuList #backBtn:active {
+      -webkit-transform: scale(0.8, 0.8);
+      -ms-transform: scale(0.8, 0.8);
+      -o-transform: scale(0.8, 0.8);
+      -moz-transform: scale(0.8, 0.8); }
+
+.deepdark {
+  color: #999;
+  background-color: #191e2a; }
+
+.menuListOut {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  -moz-transform: translateX(0); }
+
+#contextMenu {
+  width: 12vw;
+  position: absolute;
+  z-index: 20;
+  background-color: #fafafa;
+  border: 0.02rem solid #404040;
+  border-radius: 10px;
+  overflow: hidden; }
+  #contextMenu ul {
+    position: relative;
+    width: 100%;
+    height: 100%; }
+    #contextMenu ul li {
+      text-align: center;
+      line-height: 6.25vh;
+      list-style: none;
+      -webkit-transition: transform 600ms;
+      -ms-transition: transform 600ms;
+      -o-transition: transform 600ms;
+      -moz-transition: transform 600ms;
+      width: 100%;
+      height: 12.5%;
+      font-size: 0.13rem;
+      font-weight: bold; }
+      #contextMenu ul li:active {
+        -webkit-transform: scale(0.8, 0.8);
+        -ms-transform: scale(0.8, 0.8);
+        -o-transform: scale(0.8, 0.8);
+        -moz-transform: scale(0.8, 0.8); }
+      #contextMenu ul li:hover {
+        background-color: #ebebeb; }
+
+main {
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  height: 90vh; }
+  main .ggit_logo {
+    position: relative;
+    width: 60vw;
+    height: 20vh; }
+    main .ggit_logo .logo_wrapper {
+      width: 20vw;
+      height: 20vh;
+      position: relative;
+      overflow: hidden;
+      display: inline-block; }
+      main .ggit_logo .logo_wrapper .profile_wrapper {
+        -webkit-animation: logo_translate 900ms ease;
+        -ms-animation: logo_translate 900ms ease;
+        -o-animation: logo_translate 900ms ease;
+        -moz-animation: logo_translate 900ms ease;
+        width: 6vw;
+        height: 6vw;
+        position: absolute;
+        left: 4vw;
+        bottom: 10px; }
+        main .ggit_logo .logo_wrapper .profile_wrapper .profile {
+          width: 6vw;
+          height: 6vw;
+          background: url("../asset/20181203205633.png");
+          background-size: cover;
+          display: inline-block;
+          border-radius: 100%;
+          -webkit-animation: logo_rotate 900ms ease;
+          -ms-animation: logo_rotate 900ms ease;
+          -o-animation: logo_rotate 900ms ease;
+          -moz-animation: logo_rotate 900ms ease; }
+      main .ggit_logo .logo_wrapper span {
+        font-size: 0.4rem;
+        user-select: none;
+        font-weight: bold;
+        position: absolute;
+        bottom: 0px;
+        left: 10vw; }
+    main .ggit_logo .ggitSetting {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 50%;
+      height: 3vw; }
+      main .ggit_logo .ggitSetting ul {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around; }
+        main .ggit_logo .ggitSetting ul li {
+          list-style: none;
+          width: 3vw;
+          height: 3vw;
+          -webkit-transition: all 300ms;
+          -ms-transition: all 300ms;
+          -o-transition: all 300ms;
+          -moz-transition: all 300ms; }
+          main .ggit_logo .ggitSetting ul li:hover {
+            -webkit-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            -o-transform: scale(1.2);
+            -moz-transform: scale(1.2); }
+          main .ggit_logo .ggitSetting ul li:active {
+            -webkit-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+            -o-transform: scale(0.8);
+            -moz-transform: scale(0.8); }
+        main .ggit_logo .ggitSetting ul li:nth-child(1) {
+          background: url("../asset/icons/bulb.svg");
+          background-size: cover; }
+        main .ggit_logo .ggitSetting ul li.darkBulb {
+          background: url("../asset/icons/darkbulb.svg");
+          background-size: cover; }
+        main .ggit_logo .ggitSetting ul li.trash {
+          background: url("../asset/icons/delete.svg");
+          background-size: cover; }
+        main .ggit_logo .ggitSetting ul li.scheduleTask {
+          background: url("../asset/icons/canlendar.svg");
+          background-size: cover; }
+        main .ggit_logo .ggitSetting ul li.b {
+          background: url("../asset/icons/pushpin.svg");
+          background-size: cover; }
+  main .operateArea {
+    width: 40vw;
+    height: 90vh;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    right: 0px; }
+    main .operateArea .operateContainer {
+      overflow-x: auto;
+      width: 43vw;
+      height: 100%; }
+      main .operateArea .operateContainer .operateWrapper {
+        width: 40vw;
+        height: 90vh;
+        position: relative; }
+        main .operateArea .operateContainer .operateWrapper .operateHistory {
+          display: flex;
+          flex-direction: column;
+          align-items: center; }
+          main .operateArea .operateContainer .operateWrapper .operateHistory li {
+            margin-top: 2vh;
+            width: 22vw;
+            height: 10vh;
+            border: 0.02rem solid #404040;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            background: #fafafa;
+            border-radius: 15px;
+            font-size: 0.17rem; }
+            main .operateArea .operateContainer .operateWrapper .operateHistory li:active {
+              position: relative;
+              top: 3px; }
+            main .operateArea .operateContainer .operateWrapper .operateHistory li div:nth-child(1) {
+              margin-bottom: 10px;
+              font-size: 0.12rem; }
+            main .operateArea .operateContainer .operateWrapper .operateHistory li div:nth-child(2) {
+              width: 20vw;
+              height: 3.5vh;
+              word-break: break-all;
+              overflow: hidden;
+              font-size: 0.14rem; }
+        main .operateArea .operateContainer .operateWrapper .settingLists {
+          width: 100%;
+          height: 60%; }
+          main .operateArea .operateContainer .operateWrapper .settingLists ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            list-style: none;
+            width: 100%;
+            height: 100%; }
+            main .operateArea .operateContainer .operateWrapper .settingLists ul li {
+              width: 20vw;
+              height: 13vh;
+              border: 0.02rem solid #404040;
+              border-radius: 15px;
+              position: relative;
+              display: flex;
+              justify-content: space-around;
+              align-items: center; }
+              main .operateArea .operateContainer .operateWrapper .settingLists ul li:active {
+                position: relative;
+                top: 3px; }
+              main .operateArea .operateContainer .operateWrapper .settingLists ul li .settingTitle {
+                font-size: 0.15rem;
+                font-weight: bold; }
+              main .operateArea .operateContainer .operateWrapper .settingLists ul li .settingIcon {
+                width: 3vw;
+                height: 3vw; }
+            main .operateArea .operateContainer .operateWrapper .settingLists ul .setUser .settingIcon {
+              background: url("../asset/icons/smile.svg");
+              background-size: cover; }
+            main .operateArea .operateContainer .operateWrapper .settingLists ul .showSetting .settingIcon {
+              background: url("../asset/icons/tool.svg");
+              background-size: cover; }
+            main .operateArea .operateContainer .operateWrapper .settingLists ul .setKeygen .settingIcon {
+              background: url("../asset/icons/insurance.svg");
+              background-size: cover; }
+        main .operateArea .operateContainer .operateWrapper .settingDisplay {
+          width: 100%;
+          height: 40%;
+          align-items: center;
+          flex-direction: column;
+          display: flex;
+          justify-content: space-around; }
+          main .operateArea .operateContainer .operateWrapper .settingDisplay p {
+            width: 20vw;
+            height: 8vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center; }
+            main .operateArea .operateContainer .operateWrapper .settingDisplay p span {
+              font-weight: bold;
+              font-size: 0.15rem;
+              color: #999; }
+            main .operateArea .operateContainer .operateWrapper .settingDisplay p .req {
+              width: 15vw;
+              height: 6vh;
+              font-size: 0.15rem;
+              border: 0.02rem solid #404040;
+              padding-left: 5px; }
+          main .operateArea .operateContainer .operateWrapper .settingDisplay .submitBtn {
+            width: 6vw;
+            height: 6vh;
+            border: 0.02rem solid #404040;
+            border-radius: 2px;
+            outline: none;
+            font-weight: bold;
+            font-size: 0.15rem; }
+            main .operateArea .operateContainer .operateWrapper .settingDisplay .submitBtn:active {
+              position: relative;
+              top: 3px; }
+          main .operateArea .operateContainer .operateWrapper .settingDisplay .textarea_d {
+            width: 20vw;
+            height: 100%;
+            border: 0.02rem solid #404040;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 20px;
+            outline: none;
+            resize: none; }
+          main .operateArea .operateContainer .operateWrapper .settingDisplay .reset_ssh {
+            border: 0.02rem solid #404040;
+            font-size: 0.15rem;
+            font-weight: bold;
+            margin-top: 10px;
+            width: 6vw;
+            height: 6vh;
+            -webkit-transition: transform 200ms ease;
+            -ms-transition: transform 200ms ease;
+            -o-transition: transform 200ms ease;
+            -moz-transition: transform 200ms ease;
+            outline: none; }
+            main .operateArea .operateContainer .operateWrapper .settingDisplay .reset_ssh:active {
+              -webkit-transform: scale(0.9, 0.9);
+              -ms-transform: scale(0.9, 0.9);
+              -o-transform: scale(0.9, 0.9);
+              -moz-transform: scale(0.9, 0.9); }
+        main .operateArea .operateContainer .operateWrapper .tinyFucntion {
+          width: 18vw;
+          height: 90vh;
+          position: absolute;
+          right: 0;
+          top: 0; }
+          main .operateArea .operateContainer .operateWrapper .tinyFucntion ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-around;
+            justify-content: space-around; }
+            main .operateArea .operateContainer .operateWrapper .tinyFucntion ul li {
+              width: 45%;
+              height: 10%;
+              background: #fafafa;
+              border-radius: 15px;
+              border: 0.02rem solid #404040;
+              list-style: none;
+              text-align: center;
+              line-height: 9vh;
+              font-size: 0.14rem;
+              font-weight: bold; }
+              main .operateArea .operateContainer .operateWrapper .tinyFucntion ul li:active {
+                position: relative;
+                top: 3px; }
+        main .operateArea .operateContainer .operateWrapper .tinyDisplay {
+          width: 22vw;
+          height: 90vh;
+          overflow: hidden; }
+          main .operateArea .operateContainer .operateWrapper .tinyDisplay .tinyContainer {
+            width: 24vw;
+            height: 100%;
+            overflow-x: auto; }
+            main .operateArea .operateContainer .operateWrapper .tinyDisplay .tinyContainer .tinyWrapper {
+              width: 22vw;
+              height: 90vh; }
+              main .operateArea .operateContainer .operateWrapper .tinyDisplay .tinyContainer .tinyWrapper .statusbar {
+                width: 22vw;
+                height: 10vh;
+                justify-content: space-around;
+                flex-direction: column;
+                align-items: flex-start;
+                display: flex; }
+                main .operateArea .operateContainer .operateWrapper .tinyDisplay .tinyContainer .tinyWrapper .statusbar ul li {
+                  list-style: none;
+                  font-size: 0.12rem;
+                  font-weight: bold;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                  line-height: 4vh; }
+                main .operateArea .operateContainer .operateWrapper .tinyDisplay .tinyContainer .tinyWrapper .statusbar ul li:nth-child(1) {
+                  width: 5vw;
+                  height: 4vh; }
+                main .operateArea .operateContainer .operateWrapper .tinyDisplay .tinyContainer .tinyWrapper .statusbar ul li:nth-child(2) {
+                  width: 17vw;
+                  height: 4vh; }
+              main .operateArea .operateContainer .operateWrapper .tinyDisplay .tinyContainer .tinyWrapper .back {
+                width: 22vw;
+                height: 8vh;
+                background: #fafafa;
+                box-sizing: border-box;
+                border-radius: 15px;
+                border: 0.02rem solid #404040;
+                font-size: 0.14rem;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: center; }
+                main .operateArea .operateContainer .operateWrapper .tinyDisplay .tinyContainer .tinyWrapper .back:active {
+                  position: relative;
+                  top: 3px; }
+              main .operateArea .operateContainer .operateWrapper .tinyDisplay .tinyContainer .tinyWrapper ul {
+                overflow: hidden;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: space-around;
+                justify-content: space-around; }
+                main .operateArea .operateContainer .operateWrapper .tinyDisplay .tinyContainer .tinyWrapper ul .fileBlock.add {
+                  background: #f0f0f0; }
+                main .operateArea .operateContainer .operateWrapper .tinyDisplay .tinyContainer .tinyWrapper ul .fileBlock {
+                  margin-top: 5px;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-around;
+                  align-items: center;
+                  font-weight: bold;
+                  list-style: none;
+                  width: 7vw;
+                  height: 21vh;
+                  font-size: 0.12rem;
+                  -webkit-transition: transform 400ms ease;
+                  -ms-transition: transform 400ms ease;
+                  -o-transition: transform 400ms ease;
+                  -moz-transition: transform 400ms ease; }
+                  main .operateArea .operateContainer .operateWrapper .tinyDisplay .tinyContainer .tinyWrapper ul .fileBlock:active {
+                    -webkit-transform: scale(0.8, 0.8);
+                    -ms-transform: scale(0.8, 0.8);
+                    -o-transform: scale(0.8, 0.8);
+                    -moz-transform: scale(0.8, 0.8); }
+                  main .operateArea .operateContainer .operateWrapper .tinyDisplay .tinyContainer .tinyWrapper ul .fileBlock div:nth-child(1) {
+                    font-size: 0.08rem; }
+                  main .operateArea .operateContainer .operateWrapper .tinyDisplay .tinyContainer .tinyWrapper ul .fileBlock div:nth-child(2) {
+                    width: 3.6vw;
+                    height: 3.6vw; }
+                  main .operateArea .operateContainer .operateWrapper .tinyDisplay .tinyContainer .tinyWrapper ul .fileBlock .file {
+                    background: url("../asset/icons/file.svg");
+                    background-size: cover; }
+                  main .operateArea .operateContainer .operateWrapper .tinyDisplay .tinyContainer .tinyWrapper ul .fileBlock .img {
+                    background: url("../asset/icons/file-image.svg");
+                    background-size: cover; }
+                  main .operateArea .operateContainer .operateWrapper .tinyDisplay .tinyContainer .tinyWrapper ul .fileBlock .pdf {
+                    background: url("../asset/icons/file-pdf.svg");
+                    background-size: cover; }
+                  main .operateArea .operateContainer .operateWrapper .tinyDisplay .tinyContainer .tinyWrapper ul .fileBlock .unknown {
+                    background: url("../asset/icons/file-unknown.svg");
+                    background-size: cover; }
+                  main .operateArea .operateContainer .operateWrapper .tinyDisplay .tinyContainer .tinyWrapper ul .fileBlock .word {
+                    background: url("../asset/icons/file-word.svg");
+                    background-size: cover; }
+                  main .operateArea .operateContainer .operateWrapper .tinyDisplay .tinyContainer .tinyWrapper ul .fileBlock .html {
+                    background: url("../asset/icons/html.svg");
+                    background-size: cover; }
+                  main .operateArea .operateContainer .operateWrapper .tinyDisplay .tinyContainer .tinyWrapper ul .fileBlock .dir {
+                    background: url("../asset/icons/folder.svg");
+                    background-size: cover; }
+                  main .operateArea .operateContainer .operateWrapper .tinyDisplay .tinyContainer .tinyWrapper ul .fileBlock span {
+                    width: 6.5vw;
+                    height: 3vh;
+                    text-align: center;
+                    text-overflow: ellipsis;
+                    line-height: 3vh;
+                    overflow: hidden; }
+        main .operateArea .operateContainer .operateWrapper .gitLog {
+          overflow: hidden;
+          word-wrap: break-word; }
+          main .operateArea .operateContainer .operateWrapper .gitLog .echoVersion {
+            list-style: none;
+            width: 22vw;
+            font-weight: bold;
+            font-size: 0.13rem;
+            margin-bottom: 50px;
+            -webkit-transition: all 500ms ease;
+            -ms-transition: all 500ms ease;
+            -o-transition: all 500ms ease;
+            -moz-transition: all 500ms ease; }
+            main .operateArea .operateContainer .operateWrapper .gitLog .echoVersion:hover {
+              -webkit-transform: scale(0.99);
+              -ms-transform: scale(0.99);
+              -o-transform: scale(0.99);
+              -moz-transform: scale(0.99); }
+            main .operateArea .operateContainer .operateWrapper .gitLog .echoVersion span {
+              display: inline-block; }
+            main .operateArea .operateContainer .operateWrapper .gitLog .echoVersion div {
+              line-height: 5vh; }
+            main .operateArea .operateContainer .operateWrapper .gitLog .echoVersion .hashVersion {
+              user-select: all;
+              width: 22vw;
+              height: 12vh; }
+              main .operateArea .operateContainer .operateWrapper .gitLog .echoVersion .hashVersion span:nth-child(0) {
+                width: 3vw;
+                height: 3vw; }
+            main .operateArea .operateContainer .operateWrapper .gitLog .echoVersion .author {
+              width: 22vw;
+              height: 5vh; }
+            main .operateArea .operateContainer .operateWrapper .gitLog .echoVersion .date {
+              width: 22vw;
+              height: 5vh; }
+            main .operateArea .operateContainer .operateWrapper .gitLog .echoVersion .commit_m {
+              width: 22vw; }
+            main .operateArea .operateContainer .operateWrapper .gitLog .echoVersion .author {
+              width: 22vw;
+              height: 5vh; }
+  main .listContainer {
+    width: 60vw;
+    height: 70vh; }
+    main .listContainer ul.function_lists {
+      width: 95%;
+      height: 100%;
+      padding-left: 3vw;
+      display: flex;
+      list-style: none;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-content: space-around; }
+      main .listContainer ul.function_lists .block {
+        width: 17vw;
+        height: 20vh;
+        border-radius: 15px;
+        border: 0.02rem solid #404040;
+        background-color: #fafafa;
+        font-size: 20px;
+        position: relative; }
+        main .listContainer ul.function_lists .block:active {
+          position: relative;
+          top: 3px; }
+        main .listContainer ul.function_lists .block .status_block {
+          width: 4vw;
+          height: 2vh;
+          position: absolute;
+          left: 5px;
+          top: 5px; }
+          main .listContainer ul.function_lists .block .status_block li {
+            margin-right: 2px;
+            width: 0.4vw;
+            height: 0.4vw;
+            border: 0.02rem solid #404040;
+            border-radius: 0.5vw;
+            list-style: none;
+            float: left; }
+          main .listContainer ul.function_lists .block .status_block:after {
+            content: '';
+            clear: both;
+            display: block; }
+          main .listContainer ul.function_lists .block .status_block li:nth-child(1) {
+            background-color: #55fa08; }
+          main .listContainer ul.function_lists .block .status_block li:nth-child(2) {
+            background-color: #fa0808; }
+          main .listContainer ul.function_lists .block .status_block li:nth-child(3) {
+            background-color: #08d6fa; }
+        main .listContainer ul.function_lists .block .function_title {
+          width: 15vw;
+          height: 10vh;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-left: -7.5vw;
+          margin-top: -5vh;
+          display: flex;
+          justify-content: space-around;
+          align-items: center; }
+          main .listContainer ul.function_lists .block .function_title .baseIcon {
+            display: inline-block;
+            width: 3.5vw;
+            height: 3.5vw; }
+          main .listContainer ul.function_lists .block .function_title .function_name {
+            display: inline-block;
+            font-size: 0.17rem;
+            font-weight: bold;
+            text-align: center; }
+          main .listContainer ul.function_lists .block .function_title .function_icon1 {
+            background: url("../asset/icons/folder-add.svg");
+            background-size: cover; }
+          main .listContainer ul.function_lists .block .function_title .function_icon2 {
+            background: url("../asset/icons/snippets.svg");
+            background-size: cover; }
+          main .listContainer ul.function_lists .block .function_title .function_icon3 {
+            background: url("../asset/icons/hdd.svg");
+            background-size: cover; }
+          main .listContainer ul.function_lists .block .function_title .function_icon4 {
+            background: url("../asset/icons/setting.svg");
+            background-size: cover; }
+          main .listContainer ul.function_lists .block .function_title .function_icon5 {
+            background: url("../asset/icons/save.svg");
+            background-size: cover; }
+          main .listContainer ul.function_lists .block .function_title .function_icon6 {
+            background: url("../asset/icons/book.svg");
+            background-size: cover; }
+      main .listContainer ul.function_lists .deepdark {
+        color: #999;
+        background-color: #191e2a; }
+
+@keyframes logo_rotate {
+  from {
+    -webkit-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg); }
+  to {
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    -moz-transform: rotate(0); } }
+@keyframes logo_translate {
+  from {
+    -webkit-transform: translateX(-200px);
+    -ms-transform: translateX(-200px);
+    -o-transform: translateX(-200px);
+    -moz-transform: translateX(-200px); }
+  to {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    -moz-transform: translateX(0); } }
+@keyframes mrInform {
+  from {
+    -webkit-transform: translateY(400px);
+    -ms-transform: translateY(400px);
+    -o-transform: translateY(400px);
+    -moz-transform: translateY(400px); }
+  to {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    -moz-transform: translateY(0px); } }
+@keyframes ggitPopup {
+  from {
+    -webkit-transform: translate(0, -500px);
+    -ms-transform: translate(0, -500px);
+    -o-transform: translate(0, -500px);
+    -moz-transform: translate(0, -500px);
+    opacity: 0.1;
+    -webkit-opacity: 0.1;
+    -ms-opacity: 0.1;
+    -o-opacity: 0.1;
+    -moz-opacity: 0.1; }
+  to {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    opacity: 1;
+    -webkit-opacity: 1;
+    -ms-opacity: 1;
+    -o-opacity: 1;
+    -moz-opacity: 1; } }
+@keyframes hourglass {
+  form {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -moz-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotete(360deg);
+    -ms-transform: rotete(360deg);
+    -o-transform: rotete(360deg);
+    -moz-transform: rotete(360deg); } }
+
+/*# sourceMappingURL=index.css.map */

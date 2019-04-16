@@ -1,0 +1,22 @@
+extends layout
+
+block headCss 
+    link(rel="stylesheet", href=cssPath)
+
+block scriptLib_jq
+    script(src=jqueryPath)
+    script(src="javascripts/libs/flex.js")
+
+block mainContainer
+    div.no-git
+        section 您还未安装git
+
+block scriptLocalLib
+    script(src=noGitScripts)
+
+block footer
+    footer  
+        div.introduction
+            a(href=repoAddress)
+                p=appName
+                span powered by #{author}

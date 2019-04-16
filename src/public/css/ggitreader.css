@@ -1,0 +1,802 @@
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 10vh; }
+  footer div.introduction {
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -7vw;
+    margin-top: -4.5vh;
+    width: 14vw;
+    height: 9vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    -webkit-transition: background 0.6s ease;
+    -ms-transition: background 0.6s ease;
+    -o-transition: background 0.6s ease;
+    -moz-transition: background 0.6s ease; }
+    footer div.introduction a {
+      text-decoration: none;
+      color: #242424; }
+      footer div.introduction a p {
+        font-size: 0.21rem;
+        font-weight: bold; }
+      footer div.introduction a span {
+        font-size: 0.1rem; }
+    footer div.introduction:hover {
+      background: #ebebeb; }
+
+@keyframes logo_rotate {
+  from {
+    -webkit-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg); }
+  to {
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    -moz-transform: rotate(0); } }
+@keyframes logo_translate {
+  from {
+    -webkit-transform: translateX(-200px);
+    -ms-transform: translateX(-200px);
+    -o-transform: translateX(-200px);
+    -moz-transform: translateX(-200px); }
+  to {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    -moz-transform: translateX(0); } }
+@keyframes mrInform {
+  from {
+    -webkit-transform: translateY(400px);
+    -ms-transform: translateY(400px);
+    -o-transform: translateY(400px);
+    -moz-transform: translateY(400px); }
+  to {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    -moz-transform: translateY(0px); } }
+@keyframes ggitPopup {
+  from {
+    -webkit-transform: translate(0, -500px);
+    -ms-transform: translate(0, -500px);
+    -o-transform: translate(0, -500px);
+    -moz-transform: translate(0, -500px);
+    opacity: 0.1;
+    -webkit-opacity: 0.1;
+    -ms-opacity: 0.1;
+    -o-opacity: 0.1;
+    -moz-opacity: 0.1; }
+  to {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    opacity: 1;
+    -webkit-opacity: 1;
+    -ms-opacity: 1;
+    -o-opacity: 1;
+    -moz-opacity: 1; } }
+@keyframes hourglass {
+  form {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -moz-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotete(360deg);
+    -ms-transform: rotete(360deg);
+    -o-transform: rotete(360deg);
+    -moz-transform: rotete(360deg); } }
+.light {
+  background-color: #fff; }
+
+.dark {
+  background-color: #1f2430; }
+
+#mrInform {
+  z-index: 20;
+  position: fixed;
+  right: 50px;
+  bottom: 20px;
+  width: 20vw;
+  padding: 15px 0px;
+  border: 0.02rem solid #404040;
+  -webkit-animation: mrInform 600ms ease;
+  -ms-animation: mrInform 600ms ease;
+  -o-animation: mrInform 600ms ease;
+  -moz-animation: mrInform 600ms ease;
+  background-color: #fff;
+  font-size: 0.15rem;
+  font-weight: bold;
+  word-wrap: break-word;
+  display: none; }
+  #mrInform .informWrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%; }
+    #mrInform .informWrapper .informIcon {
+      display: inline-block;
+      width: 3vw;
+      height: 3vw;
+      background: url("../asset/icons/notification.svg");
+      background-size: cover; }
+    #mrInform .informWrapper span {
+      width: 10vw;
+      text-align: center; }
+    #mrInform .informWrapper .warning {
+      background: url("../asset/icons/warning.svg");
+      background-size: cover; }
+
+#ggitPopup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -20vw;
+  margin-top: -30vh;
+  width: 40vw;
+  height: 60vh;
+  z-index: 20;
+  border: 0.02rem solid #404040;
+  background: #fff;
+  border-radius: 5px;
+  -webkit-animation: ggitPopup 0.6s ease;
+  -ms-animation: ggitPopup 0.6s ease;
+  -o-animation: ggitPopup 0.6s ease;
+  -moz-animation: ggitPopup 0.6s ease;
+  opacity: 1;
+  display: none; }
+  #ggitPopup .popCancel {
+    width: 3vw;
+    height: 3vw;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    background: url("../asset/icons/cancel.svg");
+    background-size: cover;
+    -webkit-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s; }
+    #ggitPopup .popCancel:hover {
+      -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      -moz-transform: rotate(90deg); }
+  #ggitPopup .cloneStatus {
+    width: 15vw;
+    height: 10vh;
+    font-size: 0.17rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    margin-left: -7.5vw; }
+    #ggitPopup .cloneStatus div {
+      width: 3vw;
+      height: 3vw;
+      background: url("../asset/icons/hourglass.svg");
+      background-size: cover;
+      -webkit-animation: hourglass 2s infinite linear;
+      -ms-animation: hourglass 2s infinite linear;
+      -o-animation: hourglass 2s infinite linear;
+      -moz-animation: hourglass 2s infinite linear; }
+  #ggitPopup .popContainer {
+    width: 30vw;
+    height: 36vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -15vw;
+    margin-top: -18vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; }
+    #ggitPopup .popContainer .clonePTag {
+      width: 25vw;
+      height: 7vh;
+      line-height: 7vh;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.16rem;
+      font-weight: bold; }
+      #ggitPopup .popContainer .clonePTag .cloneRepo {
+        border: 0.02rem solid #404040;
+        width: 17vw;
+        height: 6vh;
+        outline: none;
+        padding-left: 5px;
+        font-size: 0.15rem; }
+    #ggitPopup .popContainer .branch_popup {
+      width: 20vw;
+      height: 25vh;
+      display: flex;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center; }
+      #ggitPopup .popContainer .branch_popup .current_branch {
+        font-size: 0.15rem;
+        font-weight: bold; }
+      #ggitPopup .popContainer .branch_popup .other_branch {
+        font-size: 0.15rem;
+        font-weight: bold; }
+        #ggitPopup .popContainer .branch_popup .other_branch select {
+          border: 0.02rem solid #404040;
+          font-size: 0.15rem;
+          width: 8vw;
+          height: 6vh;
+          outline: none;
+          border-radius: 5px; }
+    #ggitPopup .popContainer .ggitReader {
+      display: flex; }
+      #ggitPopup .popContainer .ggitReader .selectBlock {
+        width: 13vw;
+        height: 36vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        #ggitPopup .popContainer .ggitReader .selectBlock div:nth-child(1) {
+          font-size: 0.13rem;
+          font-weight: bold; }
+        #ggitPopup .popContainer .ggitReader .selectBlock .selectBlockContainer li {
+          font-size: 0.10rem;
+          font-weight: bold;
+          list-style: none;
+          margin-top: 10px;
+          text-align: center;
+          line-height: 4vh;
+          width: 10vw;
+          height: 4vh;
+          -webkit-transition: all 500ms ease;
+          -ms-transition: all 500ms ease;
+          -o-transition: all 500ms ease;
+          -moz-transition: all 500ms ease; }
+          #ggitPopup .popContainer .ggitReader .selectBlock .selectBlockContainer li:hover {
+            background-color: #ebebeb; }
+      #ggitPopup .popContainer .ggitReader .requestBlock {
+        width: 17vw;
+        height: 36vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around; }
+        #ggitPopup .popContainer .ggitReader .requestBlock div:nth-child(1) {
+          font-size: 0.13rem;
+          font-weight: bold; }
+        #ggitPopup .popContainer .ggitReader .requestBlock .addingNative {
+          font-size: 0.10rem;
+          font-weight: bold; }
+        #ggitPopup .popContainer .ggitReader .requestBlock p input {
+          border: 0.02rem solid #404040;
+          width: 15vw;
+          height: 4vh;
+          font-size: 0.13rem;
+          padding-left: 5px; }
+        #ggitPopup .popContainer .ggitReader .requestBlock .native_button {
+          width: 6vw;
+          height: 6vh;
+          border: 0.02rem solid #404040;
+          border-radius: 2px;
+          outline: none;
+          font-weight: bold;
+          font-size: 0.16rem;
+          font-weight: bold; }
+          #ggitPopup .popContainer .ggitReader .requestBlock .native_button:active {
+            position: relative;
+            top: 3px; }
+    #ggitPopup .popContainer .textarea_a, #ggitPopup .popContainer .textarea_b, #ggitPopup .popContainer .textarea_c, #ggitPopup .popContainer .textarea_d {
+      width: 25vw;
+      height: 10vh;
+      border: 0.02rem solid #404040;
+      resize: none;
+      padding-left: 5px;
+      font-size: 0.16rem;
+      font-weight: bold; }
+    #ggitPopup .popContainer .textarea_b {
+      width: 25vw;
+      height: 20vh; }
+    #ggitPopup .popContainer .textarea_c {
+      width: 25vw;
+      height: 20vh; }
+    #ggitPopup .popContainer .select_a {
+      border: 0.02rem solid #404040;
+      font-size: 0.15rem;
+      width: 8vw;
+      height: 6vh;
+      outline: none;
+      border-radius: 5px; }
+    #ggitPopup .popContainer .config_a {
+      border: 0.02rem solid #404040;
+      font-size: 0.15rem;
+      width: 6vw;
+      height: 6vh;
+      border-radius: 5px;
+      outline: none; }
+      #ggitPopup .popContainer .config_a:active {
+        position: relative;
+        top: 3px; }
+    #ggitPopup .popContainer .repo_button {
+      width: 6vw;
+      height: 6vh;
+      border: 0.02rem solid #404040;
+      border-radius: 2px;
+      outline: none;
+      font-weight: bold;
+      font-size: 0.16rem;
+      font-weight: bold; }
+      #ggitPopup .popContainer .repo_button:active {
+        position: relative;
+        top: 3px; }
+    #ggitPopup .popContainer .create_branch {
+      width: 6vw;
+      height: 6vh;
+      border: 0.02rem solid #404040;
+      border-radius: 2px;
+      outline: none;
+      font-weight: bold;
+      font-size: 0.13rem;
+      font-weight: bold; }
+      #ggitPopup .popContainer .create_branch:active {
+        position: relative;
+        top: 3px; }
+    #ggitPopup .popContainer .helpBar {
+      width: 25vw;
+      height: 5vh;
+      border: 0.02rem solid #404040;
+      overflow: hidden; }
+      #ggitPopup .popContainer .helpBar div {
+        width: 28vw;
+        height: 8vh;
+        overflow-x: auto; }
+        #ggitPopup .popContainer .helpBar div ul {
+          width: 100vw;
+          height: 5vh; }
+          #ggitPopup .popContainer .helpBar div ul li {
+            list-style: none;
+            text-align: center;
+            line-height: 4.5vh;
+            width: 7vw;
+            height: 5vh;
+            float: left;
+            font-weight: bold;
+            font-size: 0.12rem; }
+            #ggitPopup .popContainer .helpBar div ul li:active {
+              position: relative;
+              top: 3px; }
+      #ggitPopup .popContainer .helpBar .icon_l {
+        width: 5vh;
+        height: 5vh;
+        background: url("../asset/icons/left-square.svg");
+        background-size: cover;
+        position: absolute;
+        top: 1vh;
+        left: 0; }
+      #ggitPopup .popContainer .helpBar .icon_r {
+        width: 5vh;
+        height: 5vh;
+        background: url("../asset/icons/right-s.svg");
+        background-size: cover;
+        position: absolute;
+        top: 1vh;
+        right: 0; }
+    #ggitPopup .popContainer .commit_button {
+      width: 6vw;
+      height: 6vh;
+      border: 0.02rem solid #404040;
+      border-radius: 2px;
+      outline: none;
+      font-weight: bold;
+      font-size: 0.16rem;
+      font-weight: bold; }
+      #ggitPopup .popContainer .commit_button:active {
+        position: relative;
+        top: 3px; }
+    #ggitPopup .popContainer .clone_button {
+      width: 6vw;
+      height: 6vh;
+      border: 0.02rem solid #404040;
+      border-radius: 2px;
+      outline: none;
+      font-weight: bold;
+      font-size: 0.16rem;
+      font-weight: bold; }
+      #ggitPopup .popContainer .clone_button:active {
+        position: relative;
+        top: 3px; }
+    #ggitPopup .popContainer .dark {
+      background-color: #1f2430; }
+    #ggitPopup .popContainer .selectLanguage {
+      width: 30vw;
+      height: 36vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center; }
+      #ggitPopup .popContainer .selectLanguage section {
+        font-size: 0.2rem;
+        font-weight: bold; }
+      #ggitPopup .popContainer .selectLanguage div {
+        width: 20vw;
+        height: 15vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around; }
+        #ggitPopup .popContainer .selectLanguage div input {
+          width: 8vw;
+          height: 7vh;
+          font-size: 0.17rem;
+          font-weight: bold;
+          background-color: #fff;
+          outline: none;
+          border: none; }
+          #ggitPopup .popContainer .selectLanguage div input:active {
+            position: relative;
+            top: 3px; }
+
+#ggitPopup.dark {
+  background-color: #1f2430; }
+
+#mrInform.deepdark {
+  color: #999;
+  background-color: #191e2a; }
+
+.operateHistory {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .operateHistory li {
+    margin-top: 2vh;
+    width: 22vw;
+    height: 10vh;
+    border: 0.02rem solid #404040;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background: #fafafa;
+    border-radius: 15px;
+    font-size: 0.17rem; }
+    .operateHistory li:active {
+      position: relative;
+      top: 3px; }
+    .operateHistory li div:nth-child(1) {
+      margin-bottom: 10px;
+      font-size: 0.12rem; }
+    .operateHistory li div:nth-child(2) {
+      width: 20vw;
+      height: 3.5vh;
+      word-break: break-all;
+      overflow: hidden;
+      font-size: 0.14rem; }
+
+.settingLists {
+  width: 100%;
+  height: 60%; }
+  .settingLists ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    width: 100%;
+    height: 100%; }
+    .settingLists ul li {
+      width: 20vw;
+      height: 13vh;
+      border: 0.02rem solid #404040;
+      border-radius: 15px;
+      position: relative;
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+      .settingLists ul li:active {
+        position: relative;
+        top: 3px; }
+      .settingLists ul li .settingTitle {
+        font-size: 0.15rem;
+        font-weight: bold; }
+      .settingLists ul li .settingIcon {
+        width: 3vw;
+        height: 3vw; }
+    .settingLists ul .setUser .settingIcon {
+      background: url("../asset/icons/smile.svg");
+      background-size: cover; }
+    .settingLists ul .showSetting .settingIcon {
+      background: url("../asset/icons/tool.svg");
+      background-size: cover; }
+    .settingLists ul .setKeygen .settingIcon {
+      background: url("../asset/icons/insurance.svg");
+      background-size: cover; }
+
+.settingDisplay {
+  width: 100%;
+  height: 40%;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around; }
+  .settingDisplay p {
+    width: 20vw;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .settingDisplay p span {
+      font-weight: bold;
+      font-size: 0.15rem;
+      color: #999; }
+    .settingDisplay p .req {
+      width: 15vw;
+      height: 6vh;
+      font-size: 0.15rem;
+      border: 0.02rem solid #404040;
+      padding-left: 5px; }
+  .settingDisplay .submitBtn {
+    width: 6vw;
+    height: 6vh;
+    border: 0.02rem solid #404040;
+    border-radius: 2px;
+    outline: none;
+    font-weight: bold;
+    font-size: 0.15rem; }
+    .settingDisplay .submitBtn:active {
+      position: relative;
+      top: 3px; }
+  .settingDisplay .textarea_d {
+    width: 20vw;
+    height: 100%;
+    border: 0.02rem solid #404040;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    outline: none;
+    resize: none; }
+  .settingDisplay .reset_ssh {
+    border: 0.02rem solid #404040;
+    font-size: 0.15rem;
+    font-weight: bold;
+    margin-top: 10px;
+    width: 6vw;
+    height: 6vh;
+    -webkit-transition: transform 200ms ease;
+    -ms-transition: transform 200ms ease;
+    -o-transition: transform 200ms ease;
+    -moz-transition: transform 200ms ease;
+    outline: none; }
+    .settingDisplay .reset_ssh:active {
+      -webkit-transform: scale(0.9, 0.9);
+      -ms-transform: scale(0.9, 0.9);
+      -o-transform: scale(0.9, 0.9);
+      -moz-transform: scale(0.9, 0.9); }
+
+.tinyFucntion {
+  width: 18vw;
+  height: 90vh;
+  position: absolute;
+  right: 0;
+  top: 0; }
+  .tinyFucntion ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around; }
+    .tinyFucntion ul li {
+      width: 45%;
+      height: 10%;
+      background: #fafafa;
+      border-radius: 15px;
+      border: 0.02rem solid #404040;
+      list-style: none;
+      text-align: center;
+      line-height: 9vh;
+      font-size: 0.14rem;
+      font-weight: bold; }
+      .tinyFucntion ul li:active {
+        position: relative;
+        top: 3px; }
+
+.tinyDisplay {
+  width: 22vw;
+  height: 90vh;
+  overflow: hidden; }
+  .tinyDisplay .tinyContainer {
+    width: 24vw;
+    height: 100%;
+    overflow-x: auto; }
+    .tinyDisplay .tinyContainer .tinyWrapper {
+      width: 22vw;
+      height: 90vh; }
+      .tinyDisplay .tinyContainer .tinyWrapper .statusbar {
+        width: 22vw;
+        height: 10vh;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: flex-start;
+        display: flex; }
+        .tinyDisplay .tinyContainer .tinyWrapper .statusbar ul li {
+          list-style: none;
+          font-size: 0.12rem;
+          font-weight: bold;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          line-height: 4vh; }
+        .tinyDisplay .tinyContainer .tinyWrapper .statusbar ul li:nth-child(1) {
+          width: 5vw;
+          height: 4vh; }
+        .tinyDisplay .tinyContainer .tinyWrapper .statusbar ul li:nth-child(2) {
+          width: 17vw;
+          height: 4vh; }
+      .tinyDisplay .tinyContainer .tinyWrapper .back {
+        width: 22vw;
+        height: 8vh;
+        background: #fafafa;
+        box-sizing: border-box;
+        border-radius: 15px;
+        border: 0.02rem solid #404040;
+        font-size: 0.14rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .tinyDisplay .tinyContainer .tinyWrapper .back:active {
+          position: relative;
+          top: 3px; }
+      .tinyDisplay .tinyContainer .tinyWrapper ul {
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-around;
+        justify-content: space-around; }
+        .tinyDisplay .tinyContainer .tinyWrapper ul .fileBlock.add {
+          background: #f0f0f0; }
+        .tinyDisplay .tinyContainer .tinyWrapper ul .fileBlock {
+          margin-top: 5px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          font-weight: bold;
+          list-style: none;
+          width: 7vw;
+          height: 21vh;
+          font-size: 0.12rem;
+          -webkit-transition: transform 400ms ease;
+          -ms-transition: transform 400ms ease;
+          -o-transition: transform 400ms ease;
+          -moz-transition: transform 400ms ease; }
+          .tinyDisplay .tinyContainer .tinyWrapper ul .fileBlock:active {
+            -webkit-transform: scale(0.8, 0.8);
+            -ms-transform: scale(0.8, 0.8);
+            -o-transform: scale(0.8, 0.8);
+            -moz-transform: scale(0.8, 0.8); }
+          .tinyDisplay .tinyContainer .tinyWrapper ul .fileBlock div:nth-child(1) {
+            font-size: 0.08rem; }
+          .tinyDisplay .tinyContainer .tinyWrapper ul .fileBlock div:nth-child(2) {
+            width: 3.6vw;
+            height: 3.6vw; }
+          .tinyDisplay .tinyContainer .tinyWrapper ul .fileBlock .file {
+            background: url("../asset/icons/file.svg");
+            background-size: cover; }
+          .tinyDisplay .tinyContainer .tinyWrapper ul .fileBlock .img {
+            background: url("../asset/icons/file-image.svg");
+            background-size: cover; }
+          .tinyDisplay .tinyContainer .tinyWrapper ul .fileBlock .pdf {
+            background: url("../asset/icons/file-pdf.svg");
+            background-size: cover; }
+          .tinyDisplay .tinyContainer .tinyWrapper ul .fileBlock .unknown {
+            background: url("../asset/icons/file-unknown.svg");
+            background-size: cover; }
+          .tinyDisplay .tinyContainer .tinyWrapper ul .fileBlock .word {
+            background: url("../asset/icons/file-word.svg");
+            background-size: cover; }
+          .tinyDisplay .tinyContainer .tinyWrapper ul .fileBlock .html {
+            background: url("../asset/icons/html.svg");
+            background-size: cover; }
+          .tinyDisplay .tinyContainer .tinyWrapper ul .fileBlock .dir {
+            background: url("../asset/icons/folder.svg");
+            background-size: cover; }
+          .tinyDisplay .tinyContainer .tinyWrapper ul .fileBlock span {
+            width: 6.5vw;
+            height: 3vh;
+            text-align: center;
+            text-overflow: ellipsis;
+            line-height: 3vh;
+            overflow: hidden; }
+
+.gitLog {
+  overflow: hidden;
+  word-wrap: break-word; }
+  .gitLog .echoVersion {
+    list-style: none;
+    width: 22vw;
+    font-weight: bold;
+    font-size: 0.13rem;
+    margin-bottom: 50px;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    -moz-transition: all 500ms ease; }
+    .gitLog .echoVersion:hover {
+      -webkit-transform: scale(0.99);
+      -ms-transform: scale(0.99);
+      -o-transform: scale(0.99);
+      -moz-transform: scale(0.99); }
+    .gitLog .echoVersion span {
+      display: inline-block; }
+    .gitLog .echoVersion div {
+      line-height: 5vh; }
+    .gitLog .echoVersion .hashVersion {
+      user-select: all;
+      width: 22vw;
+      height: 12vh; }
+      .gitLog .echoVersion .hashVersion span:nth-child(0) {
+        width: 3vw;
+        height: 3vw; }
+    .gitLog .echoVersion .author {
+      width: 22vw;
+      height: 5vh; }
+    .gitLog .echoVersion .date {
+      width: 22vw;
+      height: 5vh; }
+    .gitLog .echoVersion .commit_m {
+      width: 22vw; }
+    .gitLog .echoVersion .author {
+      width: 22vw;
+      height: 5vh; }
+
+main .tinyDisplay {
+  display: inline-block;
+  width: 24vw;
+  height: 90vh;
+  margin-left: 100px; }
+  main .tinyDisplay .tinyContainer {
+    width: 25vw;
+    height: 90vh; }
+main .markdownDisplay {
+  width: 50vw;
+  height: 90vh;
+  overflow: hidden;
+  display: inline-block; }
+  main .markdownDisplay .markdownDisplayContainer {
+    width: 52vw;
+    height: 90vh;
+    overflow-y: auto; }
+    main .markdownDisplay .markdownDisplayContainer .markdownDisplayWrapper {
+      padding: 10px;
+      width: 50vw;
+      height: 90vh; }
+      main .markdownDisplay .markdownDisplayContainer .markdownDisplayWrapper pre code {
+        font-size: 0.08rem; }
+        main .markdownDisplay .markdownDisplayContainer .markdownDisplayWrapper pre code h1 {
+          margin-bottom: 20px; }
+        main .markdownDisplay .markdownDisplayContainer .markdownDisplayWrapper pre code h2 {
+          margin-bottom: 20px; }
+        main .markdownDisplay .markdownDisplayContainer .markdownDisplayWrapper pre code h3 {
+          margin-bottom: 20px; }
+        main .markdownDisplay .markdownDisplayContainer .markdownDisplayWrapper pre code h4 {
+          margin-bottom: 20px; }
+        main .markdownDisplay .markdownDisplayContainer .markdownDisplayWrapper pre code h5 {
+          margin-bottom: 20px; }
+        main .markdownDisplay .markdownDisplayContainer .markdownDisplayWrapper pre code h6 {
+          margin-bottom: 20px; }
+        main .markdownDisplay .markdownDisplayContainer .markdownDisplayWrapper pre code h7 {
+          margin-bottom: 20px; }
+
+/*# sourceMappingURL=ggitreader.css.map */

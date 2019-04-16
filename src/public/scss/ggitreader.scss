@@ -1,0 +1,39 @@
+@import './mixin.scss';
+@import './footer.scss';
+@import './utils.scss';
+@import './operate.scss';
+
+
+main{
+    .tinyDisplay{
+        display: inline-block;
+        @include box(24vw, 90vh);
+        margin-left: 100px;
+        .tinyContainer{
+            @include box(25vw, 90vh);
+        }
+    }
+    .markdownDisplay{
+        @include box(50vw, 90vh);
+        overflow: hidden;
+        display: inline-block;
+        .markdownDisplayContainer{
+            @include box(52vw, 90vh);
+            overflow-y: auto;
+            .markdownDisplayWrapper{
+                padding: 10px;
+                @include box(50vw, 90vh);
+                pre{
+                    code{
+                        font-size: 0.08rem;
+                        @for $num from 1 through  7 {
+                            h#{$num}{
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

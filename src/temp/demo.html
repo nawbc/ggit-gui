@@ -1,0 +1,125 @@
+<script>
+
+    (function(global, factory){
+        factory(global);
+    })(this, function(exports){
+        'use strict'
+    
+        /**
+         * @param { String } basePath 
+         * @param { Array } files 
+         * @param { String } fun 
+         */
+        const createFileSystemHtml = (basePath, files, fun) =>{
+            var block = '';
+            var currentBranch = JSON.parse(window.sessionStorage.branch_a).currentBranch;
+            files.forEach((val) => {
+                const url = [basePath, val[0]].join(path.EOL());
+                const a = 'file' === val[1] ? localRepo.handleFileExt(val[0]) : 'dir';
+                block += `<li title="${url}" class="fileBlock">
+                                    <div>${val[2]}</div><div class="${a}"></div>
+                                    <span>${val[0]}</span>
+                                </li>`
+            })
+            $('.tinyWrapper').append(`<div class="statusbar" title="${basePath}">
+                                                            <ul>
+                                                                <li id="workStation">${fun}:&nbsp</li>
+                                                                <li>${basePath}</li>
+                                                            </ul>
+                                                            <ul>
+                                                                <li id="currentBranch">${val('Current Branch','当前分支')}:</li>
+                                                                <li>${currentBranch?  currentBranch : val('None', '未知')}</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="back">${val('Back', '返回上一级')}</div>
+                                                        <ul class='fileWrapper'>${block}</ul>`);
+            this.enterFoldController(basePath);
+        }
+    
+    
+        // foldClickController.prototype.dblclickEnterIn = (callback)=>{
+        //     $('.tinyWrapper ul li').dblclick(function () {
+        //         if ('dir' === $(this).children('div:eq(1)').attr('class')) {
+        //             const src = $(this)[0].title;
+        //             callback(src);
+        //         }
+        //     })
+        // }
+    
+        // foldClickController.prototype.tempStageSessionStorage = ()=>{
+        //      // 单击标记进入缓存区
+        //      $('.tinyWrapper ul li').click(function () {
+        //         if ('dir' !== $(this).children('div:eq(1)').attr('class')) {
+        //             if ($(this).hasClass('add')) {
+        //                 $(this).removeClass('add');
+        //                 utils.operateStageFiles($(this).children('span').text(), 'remove');
+        //             } else {
+        //                 $(this).addClass('add');
+        //                 utils.operateStageFiles($(this).children('span').text(), 'add');
+        //             }
+        //         }
+        //     })
+        // }
+    
+        // foldClickController.prototype.backToPreFold = ()=>{
+        //     $('.tinyWrapper .back').click(function () {
+        //         var a, prePath, limitPath;
+        //         localStorage.getItem('aboutApp');
+        //         limitPath = JSON.parse(localStorage.getItem('env'))['homedir'];
+        //         a = path.split(path.EOL());
+        //         a.splice(a.length - 1, 1);
+        //         prePath = a.join(path.EOL());
+        //         if (prePath === limitPath) {
+        //             utils.ggitNotification(`${val('Beyond my power', '超出势力范围')}`, true);
+        //             return false;
+        //         }
+        //         callback(prePath);
+        //     })
+        // }
+        
+        
+        
+        FoldClickController.prototype.demo = ()=>{
+            console.log(11);
+        }
+    
+        
+        function FoldClickController  (){
+
+        }
+        
+        /**
+         * 创建一个FilePath类  包含EOL返回操作系统分隔符
+         * @class 
+         * @public
+         */
+
+        function Sep(){
+
+        }
+
+        function FilePath (){
+            this.Sep = Sep;
+        }
+    
+        exports.FilePath = FilePath;
+        /**
+        * 
+        * @public
+        * @modules 
+         * @extends FilePath
+         */
+        FileSystem.prototype = FilePath.prototype;
+        
+        FileSystem.prototype.createFileSystemHtml = createFileSystemHtml;
+        
+        FileSystem.prototype.foldClickController = new FoldClickController();
+
+
+        function FileSystem(){
+            FilePath.call(this);
+        }
+        exports.FileSystem = FileSystem;
+    })
+    
+</script>

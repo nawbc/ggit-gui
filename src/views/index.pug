@@ -1,0 +1,47 @@
+extends layout
+
+block scriptLib_jq
+    script(src='javascripts/libs/jquery.min.js')
+    script(src='javascripts/libs/flex.js')
+    script(src="javascripts/utils.js" type="text/javascript")
+
+    script.
+        window.ggit = {};
+        window.sessionStorage.removeItem('tempStageFiles');
+block indexHeader
+    link(rel="stylesheet", href=mainAppCssPath)
+    link(rel="stylesheet", href=utilsAppCssPath)
+    link(rel="stylesheet", href="css/font.css")
+    link(rel="shortcut icon", href="asset/20181203205633.png")
+        
+
+block menu
+    div.d.menuList
+    div(class='aboutApp' style='display:none')  
+
+block mainContainer
+    main
+        aside.operateArea: div.operateContainer: div.operateWrapper
+        div.ggit_logo
+            div.logo_wrapper
+                div.profile_wrapper: div.profile
+                span GGit
+            div.ggitSetting
+                ul
+                    li.icon.darkBulb(title='黑夜模式')
+                    li.icon.scheduleTask(title='定时任务')
+                    li.icon.trash
+                    li.icon.b
+        div.listContainer
+            include includes/listBlocks.pug
+
+block footer
+    include includes/footer.pug
+
+block scriptLocalLib
+    script(src="javascripts/switchLang.js" type="text/javascript")
+    script(src="javascripts/fsView.js" type="text/javascript")
+    script(src="javascripts/functionLists.js" type="text/javascript")
+    script(src="javascripts/menu.js" type="text/javascript")
+    script(src="javascripts/index.js" type="text/javascript")
+    

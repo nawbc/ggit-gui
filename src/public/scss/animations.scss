@@ -1,0 +1,42 @@
+@import './mixin.scss';
+
+@keyframes logo_rotate{
+    from{
+        @include transform(rotate(-360deg));
+    }to{
+        @include transform(rotate(0));
+    }
+}
+@keyframes logo_translate{
+    from{
+        @include transform(translateX(-200px));
+    }to{
+        @include transform(translateX(0));
+    }
+}
+
+@keyframes  mrInform{
+    from{
+        @include transform(translateY(400px));
+    }to{
+        @include transform(translateY(0px));
+    }
+}
+
+@keyframes ggitPopup{
+    from{
+        @include transform(translate(0,-500px));
+        @include opacity(0.1);
+    }to{
+        @include transform(translate(0,0));
+        @include opacity(1);
+    }
+}
+
+@keyframes hourglass{
+    form{
+        @include transform(rotate(0deg))
+    }to{
+        @include transform(rotete(360deg));
+    }
+}

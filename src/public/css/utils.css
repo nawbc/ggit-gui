@@ -1,0 +1,424 @@
+@keyframes logo_rotate {
+  from {
+    -webkit-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg); }
+  to {
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    -moz-transform: rotate(0); } }
+@keyframes logo_translate {
+  from {
+    -webkit-transform: translateX(-200px);
+    -ms-transform: translateX(-200px);
+    -o-transform: translateX(-200px);
+    -moz-transform: translateX(-200px); }
+  to {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    -moz-transform: translateX(0); } }
+@keyframes mrInform {
+  from {
+    -webkit-transform: translateY(400px);
+    -ms-transform: translateY(400px);
+    -o-transform: translateY(400px);
+    -moz-transform: translateY(400px); }
+  to {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    -moz-transform: translateY(0px); } }
+@keyframes ggitPopup {
+  from {
+    -webkit-transform: translate(0, -500px);
+    -ms-transform: translate(0, -500px);
+    -o-transform: translate(0, -500px);
+    -moz-transform: translate(0, -500px);
+    opacity: 0.1;
+    -webkit-opacity: 0.1;
+    -ms-opacity: 0.1;
+    -o-opacity: 0.1;
+    -moz-opacity: 0.1; }
+  to {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    opacity: 1;
+    -webkit-opacity: 1;
+    -ms-opacity: 1;
+    -o-opacity: 1;
+    -moz-opacity: 1; } }
+@keyframes hourglass {
+  form {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -moz-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotete(360deg);
+    -ms-transform: rotete(360deg);
+    -o-transform: rotete(360deg);
+    -moz-transform: rotete(360deg); } }
+.light {
+  background-color: #fff; }
+
+.dark {
+  background-color: #1f2430; }
+
+#mrInform {
+  z-index: 20;
+  position: fixed;
+  right: 50px;
+  bottom: 20px;
+  width: 20vw;
+  padding: 15px 0px;
+  border: 0.02rem solid #404040;
+  -webkit-animation: mrInform 600ms ease;
+  -ms-animation: mrInform 600ms ease;
+  -o-animation: mrInform 600ms ease;
+  -moz-animation: mrInform 600ms ease;
+  background-color: #fff;
+  font-size: 0.15rem;
+  font-weight: bold;
+  word-wrap: break-word;
+  display: none; }
+  #mrInform .informWrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%; }
+    #mrInform .informWrapper .informIcon {
+      display: inline-block;
+      width: 3vw;
+      height: 3vw;
+      background: url("../asset/icons/notification.svg");
+      background-size: cover; }
+    #mrInform .informWrapper span {
+      width: 10vw;
+      text-align: center; }
+    #mrInform .informWrapper .warning {
+      background: url("../asset/icons/warning.svg");
+      background-size: cover; }
+
+#ggitPopup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -20vw;
+  margin-top: -30vh;
+  width: 40vw;
+  height: 60vh;
+  z-index: 20;
+  border: 0.02rem solid #404040;
+  background: #fff;
+  border-radius: 5px;
+  -webkit-animation: ggitPopup 0.6s ease;
+  -ms-animation: ggitPopup 0.6s ease;
+  -o-animation: ggitPopup 0.6s ease;
+  -moz-animation: ggitPopup 0.6s ease;
+  opacity: 1;
+  display: none; }
+  #ggitPopup .popCancel {
+    width: 3vw;
+    height: 3vw;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    background: url("../asset/icons/cancel.svg");
+    background-size: cover;
+    -webkit-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s; }
+    #ggitPopup .popCancel:hover {
+      -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      -moz-transform: rotate(90deg); }
+  #ggitPopup .cloneStatus {
+    width: 15vw;
+    height: 10vh;
+    font-size: 0.17rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    margin-left: -7.5vw; }
+    #ggitPopup .cloneStatus div {
+      width: 3vw;
+      height: 3vw;
+      background: url("../asset/icons/hourglass.svg");
+      background-size: cover;
+      -webkit-animation: hourglass 2s infinite linear;
+      -ms-animation: hourglass 2s infinite linear;
+      -o-animation: hourglass 2s infinite linear;
+      -moz-animation: hourglass 2s infinite linear; }
+  #ggitPopup .popContainer {
+    width: 30vw;
+    height: 36vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -15vw;
+    margin-top: -18vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; }
+    #ggitPopup .popContainer .clonePTag {
+      width: 25vw;
+      height: 7vh;
+      line-height: 7vh;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.16rem;
+      font-weight: bold; }
+      #ggitPopup .popContainer .clonePTag .cloneRepo {
+        border: 0.02rem solid #404040;
+        width: 17vw;
+        height: 6vh;
+        outline: none;
+        padding-left: 5px;
+        font-size: 0.15rem; }
+    #ggitPopup .popContainer .branch_popup {
+      width: 20vw;
+      height: 25vh;
+      display: flex;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center; }
+      #ggitPopup .popContainer .branch_popup .current_branch {
+        font-size: 0.15rem;
+        font-weight: bold; }
+      #ggitPopup .popContainer .branch_popup .other_branch {
+        font-size: 0.15rem;
+        font-weight: bold; }
+        #ggitPopup .popContainer .branch_popup .other_branch select {
+          border: 0.02rem solid #404040;
+          font-size: 0.15rem;
+          width: 8vw;
+          height: 6vh;
+          outline: none;
+          border-radius: 5px; }
+    #ggitPopup .popContainer .ggitReader {
+      display: flex; }
+      #ggitPopup .popContainer .ggitReader .selectBlock {
+        width: 13vw;
+        height: 36vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        #ggitPopup .popContainer .ggitReader .selectBlock div:nth-child(1) {
+          font-size: 0.13rem;
+          font-weight: bold; }
+        #ggitPopup .popContainer .ggitReader .selectBlock .selectBlockContainer li {
+          font-size: 0.10rem;
+          font-weight: bold;
+          list-style: none;
+          margin-top: 10px;
+          text-align: center;
+          line-height: 4vh;
+          width: 10vw;
+          height: 4vh;
+          -webkit-transition: all 500ms ease;
+          -ms-transition: all 500ms ease;
+          -o-transition: all 500ms ease;
+          -moz-transition: all 500ms ease; }
+          #ggitPopup .popContainer .ggitReader .selectBlock .selectBlockContainer li:hover {
+            background-color: #ebebeb; }
+      #ggitPopup .popContainer .ggitReader .requestBlock {
+        width: 17vw;
+        height: 36vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around; }
+        #ggitPopup .popContainer .ggitReader .requestBlock div:nth-child(1) {
+          font-size: 0.13rem;
+          font-weight: bold; }
+        #ggitPopup .popContainer .ggitReader .requestBlock .addingNative {
+          font-size: 0.10rem;
+          font-weight: bold; }
+        #ggitPopup .popContainer .ggitReader .requestBlock p input {
+          border: 0.02rem solid #404040;
+          width: 15vw;
+          height: 4vh;
+          font-size: 0.13rem;
+          padding-left: 5px; }
+        #ggitPopup .popContainer .ggitReader .requestBlock .native_button {
+          width: 6vw;
+          height: 6vh;
+          border: 0.02rem solid #404040;
+          border-radius: 2px;
+          outline: none;
+          font-weight: bold;
+          font-size: 0.16rem;
+          font-weight: bold; }
+          #ggitPopup .popContainer .ggitReader .requestBlock .native_button:active {
+            position: relative;
+            top: 3px; }
+    #ggitPopup .popContainer .textarea_a, #ggitPopup .popContainer .textarea_b, #ggitPopup .popContainer .textarea_c, #ggitPopup .popContainer .textarea_d {
+      width: 25vw;
+      height: 10vh;
+      border: 0.02rem solid #404040;
+      resize: none;
+      padding-left: 5px;
+      font-size: 0.16rem;
+      font-weight: bold; }
+    #ggitPopup .popContainer .textarea_b {
+      width: 25vw;
+      height: 20vh; }
+    #ggitPopup .popContainer .textarea_c {
+      width: 25vw;
+      height: 20vh; }
+    #ggitPopup .popContainer .select_a {
+      border: 0.02rem solid #404040;
+      font-size: 0.15rem;
+      width: 8vw;
+      height: 6vh;
+      outline: none;
+      border-radius: 5px; }
+    #ggitPopup .popContainer .config_a {
+      border: 0.02rem solid #404040;
+      font-size: 0.15rem;
+      width: 6vw;
+      height: 6vh;
+      border-radius: 5px;
+      outline: none; }
+      #ggitPopup .popContainer .config_a:active {
+        position: relative;
+        top: 3px; }
+    #ggitPopup .popContainer .repo_button {
+      width: 6vw;
+      height: 6vh;
+      border: 0.02rem solid #404040;
+      border-radius: 2px;
+      outline: none;
+      font-weight: bold;
+      font-size: 0.16rem;
+      font-weight: bold; }
+      #ggitPopup .popContainer .repo_button:active {
+        position: relative;
+        top: 3px; }
+    #ggitPopup .popContainer .create_branch {
+      width: 6vw;
+      height: 6vh;
+      border: 0.02rem solid #404040;
+      border-radius: 2px;
+      outline: none;
+      font-weight: bold;
+      font-size: 0.13rem;
+      font-weight: bold; }
+      #ggitPopup .popContainer .create_branch:active {
+        position: relative;
+        top: 3px; }
+    #ggitPopup .popContainer .helpBar {
+      width: 25vw;
+      height: 5vh;
+      border: 0.02rem solid #404040;
+      overflow: hidden; }
+      #ggitPopup .popContainer .helpBar div {
+        width: 28vw;
+        height: 8vh;
+        overflow-x: auto; }
+        #ggitPopup .popContainer .helpBar div ul {
+          width: 100vw;
+          height: 5vh; }
+          #ggitPopup .popContainer .helpBar div ul li {
+            list-style: none;
+            text-align: center;
+            line-height: 4.5vh;
+            width: 7vw;
+            height: 5vh;
+            float: left;
+            font-weight: bold;
+            font-size: 0.12rem; }
+            #ggitPopup .popContainer .helpBar div ul li:active {
+              position: relative;
+              top: 3px; }
+      #ggitPopup .popContainer .helpBar .icon_l {
+        width: 5vh;
+        height: 5vh;
+        background: url("../asset/icons/left-square.svg");
+        background-size: cover;
+        position: absolute;
+        top: 1vh;
+        left: 0; }
+      #ggitPopup .popContainer .helpBar .icon_r {
+        width: 5vh;
+        height: 5vh;
+        background: url("../asset/icons/right-s.svg");
+        background-size: cover;
+        position: absolute;
+        top: 1vh;
+        right: 0; }
+    #ggitPopup .popContainer .commit_button {
+      width: 6vw;
+      height: 6vh;
+      border: 0.02rem solid #404040;
+      border-radius: 2px;
+      outline: none;
+      font-weight: bold;
+      font-size: 0.16rem;
+      font-weight: bold; }
+      #ggitPopup .popContainer .commit_button:active {
+        position: relative;
+        top: 3px; }
+    #ggitPopup .popContainer .clone_button {
+      width: 6vw;
+      height: 6vh;
+      border: 0.02rem solid #404040;
+      border-radius: 2px;
+      outline: none;
+      font-weight: bold;
+      font-size: 0.16rem;
+      font-weight: bold; }
+      #ggitPopup .popContainer .clone_button:active {
+        position: relative;
+        top: 3px; }
+    #ggitPopup .popContainer .dark {
+      background-color: #1f2430; }
+    #ggitPopup .popContainer .selectLanguage {
+      width: 30vw;
+      height: 36vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center; }
+      #ggitPopup .popContainer .selectLanguage section {
+        font-size: 0.2rem;
+        font-weight: bold; }
+      #ggitPopup .popContainer .selectLanguage div {
+        width: 20vw;
+        height: 15vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around; }
+        #ggitPopup .popContainer .selectLanguage div input {
+          width: 8vw;
+          height: 7vh;
+          font-size: 0.17rem;
+          font-weight: bold;
+          background-color: #fff;
+          outline: none;
+          border: none; }
+          #ggitPopup .popContainer .selectLanguage div input:active {
+            position: relative;
+            top: 3px; }
+
+#ggitPopup.dark {
+  background-color: #1f2430; }
+
+#mrInform.deepdark {
+  color: #999;
+  background-color: #191e2a; }
+
+/*# sourceMappingURL=utils.css.map */

@@ -1,0 +1,87 @@
+/*
+Error: Undefined mixin 'box'.
+        on line 8 of src/public/scss/operate.scss, in `box'
+        from line 8 of src/public/scss/operate.scss
+
+3:     display: flex;
+4:     flex-direction: column;
+5:     align-items: center;
+6:     li{
+7:         margin-top: 2vh;
+8:         @include box(22vw, 10vh);
+9:         @include border;
+10:         list-style: none;
+11:         display: flex;
+12:         flex-direction: column;
+13:         align-items:  center;
+
+Backtrace:
+src/public/scss/operate.scss:8:in `box'
+src/public/scss/operate.scss:8
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/stack.rb:98:in `block in with_mixin'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/stack.rb:135:in `with_frame'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/stack.rb:98:in `with_mixin'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:346:in `visit_mixin'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/stack.rb:79:in `block in with_base'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/stack.rb:135:in `with_frame'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/stack.rb:79:in `with_base'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:158:in `visit'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:440:in `block (2 levels) in visit_rule'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:440:in `map'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:440:in `block in visit_rule'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:438:in `visit_rule'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/stack.rb:79:in `block in with_base'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/stack.rb:135:in `with_frame'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/stack.rb:79:in `with_base'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:158:in `visit'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:440:in `block (2 levels) in visit_rule'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:440:in `map'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:440:in `block in visit_rule'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:438:in `visit_rule'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/stack.rb:79:in `block in with_base'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/stack.rb:135:in `with_frame'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/stack.rb:79:in `with_base'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:158:in `visit'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/base.rb:52:in `map'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:157:in `visit'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:10:in `visit'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/root_node.rb:36:in `css_tree'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/engine.rb:307:in `render_with_sourcemap'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/plugin/compiler.rb:209:in `each'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.6.0/lib/sass/plugin/compiler.rb:320:in `block in watch'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+D:/Programer/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'box'.\A         on line 8 of src/public/scss/operate.scss, in `box'\A         from line 8 of src/public/scss/operate.scss\A \A 3:     display: flex;\A 4:     flex-direction: column;\A 5:     align-items: center;\A 6:     li{\A 7:         margin-top: 2vh;\A 8:         @include box(22vw, 10vh);\A 9:         @include border;\A 10:         list-style: none;\A 11:         display: flex;\A 12:         flex-direction: column;\A 13:         align-items:  center;"; }

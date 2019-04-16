@@ -1,0 +1,172 @@
+.menuBtn {
+  width: 3vw;
+  height: 3vw;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 12;
+  -webkit-transition: transform 600ms ease;
+  -ms-transition: transform 600ms ease;
+  -o-transition: transform 600ms ease;
+  -moz-transition: transform 600ms ease;
+  background: url("../asset/icons/left-square.svg");
+  background-size: cover; }
+
+.menuBtnOut {
+  background: url("../asset/icons/profile.svg");
+  background-size: cover;
+  -webkit-transform: translateX(-25vw);
+  -ms-transform: translateX(-25vw);
+  -o-transform: translateX(-25vw);
+  -moz-transform: translateX(-25vw); }
+
+.menuList {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+  width: 25vw;
+  height: 100vh;
+  background-color: #fafafa;
+  border: 0.02rem solid #404040;
+  -webkit-transition: transform 600ms ease;
+  -ms-transition: transform 600ms ease;
+  -o-transition: transform 600ms ease;
+  -moz-transition: transform 600ms ease;
+  -webkit-transform: translateX(40vw);
+  -ms-transform: translateX(40vw);
+  -o-transform: translateX(40vw);
+  -moz-transform: translateX(40vw); }
+  .menuList .menuContainer {
+    width: 15vw;
+    height: 50vh;
+    margin: 5vh auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column; }
+    .menuList .menuContainer li {
+      list-style: none;
+      height: 7vh;
+      text-align: center;
+      line-height: 7vh;
+      font-size: 0.17rem;
+      font-weight: bold;
+      box-sizing: border-box;
+      -webkit-transition: all 200ms ease;
+      -ms-transition: all 200ms ease;
+      -o-transition: all 200ms ease;
+      -moz-transition: all 200ms ease; }
+      .menuList .menuContainer li a {
+        text-decoration: none;
+        color: #999; }
+      .menuList .menuContainer li:active {
+        -webkit-transform: translateX(8px);
+        -ms-transform: translateX(8px);
+        -o-transform: translateX(8px);
+        -moz-transform: translateX(8px); }
+  .menuList .aboutAuthor {
+    width: 10vw;
+    height: 8vh;
+    -webkit-transition: all 0.6s;
+    -ms-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -5vw; }
+    .menuList .aboutAuthor .aboutWrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around; }
+      .menuList .aboutAuthor .aboutWrapper:hover {
+        border-bottom: 4px solid #404040; }
+      .menuList .aboutAuthor .aboutWrapper .authorIcon {
+        width: 3vw;
+        height: 3vw;
+        background: url("../asset/icons/idcard.svg");
+        background-size: cover;
+        display: inline-block; }
+      .menuList .aboutAuthor .aboutWrapper span {
+        font-size: 0.16rem;
+        font-weight: bold; }
+  .menuList .aboutApp {
+    margin-top: 50px; }
+    .menuList .aboutApp li {
+      font-size: 0.14rem;
+      text-align: center;
+      width: 100%;
+      height: 8vh;
+      list-style: none;
+      font-weight: bold;
+      word-wrap: break-word; }
+      .menuList .aboutApp li span:nth-child(1) {
+        width: 30%; }
+      .menuList .aboutApp li span:nth-child(2) {
+        width: 70%; }
+  .menuList #backBtn {
+    font-weight: bold;
+    -webkit-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    width: 3.5vw;
+    height: 4vh;
+    text-align: center;
+    line-height: 4vh;
+    font-size: 0.15rem;
+    border: 0.02rem solid #404040;
+    position: absolute;
+    right: 20px; }
+    .menuList #backBtn:active {
+      -webkit-transform: scale(0.8, 0.8);
+      -ms-transform: scale(0.8, 0.8);
+      -o-transform: scale(0.8, 0.8);
+      -moz-transform: scale(0.8, 0.8); }
+
+.deepdark {
+  color: #999;
+  background-color: #191e2a; }
+
+.menuListOut {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  -moz-transform: translateX(0); }
+
+#contextMenu {
+  width: 12vw;
+  position: absolute;
+  z-index: 20;
+  background-color: #fafafa;
+  border: 0.02rem solid #404040;
+  border-radius: 10px;
+  overflow: hidden; }
+  #contextMenu ul {
+    position: relative;
+    width: 100%;
+    height: 100%; }
+    #contextMenu ul li {
+      text-align: center;
+      line-height: 6.25vh;
+      list-style: none;
+      -webkit-transition: transform 600ms;
+      -ms-transition: transform 600ms;
+      -o-transition: transform 600ms;
+      -moz-transition: transform 600ms;
+      width: 100%;
+      height: 12.5%;
+      font-size: 0.13rem;
+      font-weight: bold; }
+      #contextMenu ul li:active {
+        -webkit-transform: scale(0.8, 0.8);
+        -ms-transform: scale(0.8, 0.8);
+        -o-transform: scale(0.8, 0.8);
+        -moz-transform: scale(0.8, 0.8); }
+      #contextMenu ul li:hover {
+        background-color: #ebebeb; }
+
+/*# sourceMappingURL=menu.css.map */

@@ -1,0 +1,308 @@
+// 操作记录
+.operateHistory{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    li{
+        margin-top: 2vh;
+        @include box(22vw, 10vh);
+        @include border;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items:  center;
+        justify-content: center;
+        font-weight: bold;
+        background: #fafafa;
+        border-radius: 15px;
+        font-size: 0.17rem;
+        @include btn-down;
+        // @include  deepDark;
+        div:nth-child(1){
+            margin-bottom: 10px;
+            font-size: 0.12rem;
+        }
+        div:nth-child(2){
+            @include box(20vw, 3.5vh);
+            word-break: break-all;
+            overflow: hidden;
+            font-size: 0.14rem;
+        }
+    }
+}
+
+// ggit 全局设置
+.settingLists{
+    @include box(100%, 60%);
+    ul{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        list-style: none;
+        @include box(100%, 100%);
+        li{
+            @include box(20vw, 13vh);
+            @include border;
+            border-radius: 15px;
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            @include btn-down;
+            .settingTitle{
+                font-size: 0.15rem;
+                font-weight: bold;
+            } 
+            .settingIcon{
+                @include box(3vw, 3vw);
+            }
+        }
+        .setUser{
+            .settingIcon{
+                @include icon('../asset/icons/smile.svg');
+            }
+        }
+        .showSetting{
+            .settingIcon{
+                @include icon('../asset/icons/tool.svg');
+            }
+        }
+        .setKeygen{
+            .settingIcon{
+                @include icon('../asset/icons/insurance.svg');
+            }
+        }
+    }
+}   
+// 设置展示
+.settingDisplay{
+    @include box(100%, 40%);
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    p{
+        @include box(20vw, 8vh);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span{
+            font-weight: bold;
+            font-size: 0.15rem;
+            color: #999;
+        }
+        .req{
+            @include box(15vw, 6vh);
+            font-size: 0.15rem;
+            @include border;
+            padding-left: 5px;
+        }
+
+    }
+    .submitBtn{
+        @include button;
+        font-size: 0.15rem;
+    }
+    // .deepdark{
+    //     @include deepDark;
+    // }
+    // 显示设置详情
+    .textarea_d{
+        @include box(20vw, 100%);
+        @include border;
+        padding: 10px;
+        font-weight: bold;
+        font-size: 20px;
+        outline: none;
+        resize: none;
+    }
+    .reset_ssh{
+        @include border;
+        font-size: 0.15rem;
+        font-weight: bold;
+        margin-top: 10px;
+        @include box(6vw, 6vh);
+        @include btn-scale(0.9);
+        @include transition(transform 200ms ease); 
+        outline: none;
+    }
+
+
+}
+//repo 功能
+.tinyFucntion{
+    @include box(18vw, 90vh);
+    position: absolute;
+    right: 0; top: 0;
+    ul{
+        @include box(100%, 100%);
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-around;
+        justify-content: space-around;
+        li{
+            @include box(45%, 10%);
+            background: #fafafa;
+            border-radius: 15px;
+            @include border;
+            list-style: none;
+            @include btn-down;
+            text-align: center;
+            line-height: 9vh;
+            font-size: 0.14rem;
+            font-weight: bold;
+            // @include deepDark;
+        } 
+    }
+}
+// 文件展示
+.tinyDisplay{
+    @include box(22vw, 90vh);
+    // @include testBorder;
+    overflow: hidden;
+    .tinyContainer{
+        @include box(24vw, 100%);
+        overflow-x: auto;
+        .tinyWrapper{
+            @include box(22vw, 90vh);
+            .statusbar{
+                @include box(22vw, 10vh);
+                justify-content: space-around;
+                flex-direction: column;
+                align-items: flex-start;
+                display: flex; 
+                ul{
+                    li{
+                        list-style: none;
+                        font-size: 0.12rem;
+                        font-weight: bold;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        line-height: 4vh;
+                    }
+                    li:nth-child(1){
+                        width: 5vw;
+                        height: 4vh;
+                    }
+                    li:nth-child(2){
+                        width: 17vw;
+                        height: 4vh;
+                    }
+                }
+            }
+            .back{
+                @include box(22vw, 8vh);
+                background: #fafafa;
+                box-sizing: border-box;
+                border-radius: 15px;
+                @include border;
+                font-size: 0.14rem;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include btn-down;
+                // @include deepDark;
+            }
+            ul{
+                overflow: hidden;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: space-around;
+                justify-content: space-around;
+                .fileBlock.add{
+                    background: #f0f0f0;
+                }
+                .fileBlock{
+                    margin-top: 5px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    font-weight: bold;
+                    list-style: none;
+                    @include box(7vw, 21vh);
+                    font-size: 0.12rem;
+                    @include transition(transform 400ms ease);
+                    @include btn-scale(0.8);
+                    div:nth-child(1){
+                        font-size: 0.08rem;
+                    }
+                    div:nth-child(2){
+                        @include box(3.6vw, 3.6vw);
+                    }
+                    .file{
+                        @include icon('../asset/icons/file.svg');
+                    }
+                    .img{
+                        @include icon('../asset/icons/file-image.svg');
+                    }
+                    .pdf{
+                        @include icon('../asset/icons/file-pdf.svg');
+                    }
+                    .unknown{
+                        @include icon('../asset/icons/file-unknown.svg');
+                    }
+                    .word{
+                        @include icon('../asset/icons/file-word.svg');
+                    }
+                    .html{
+                        @include icon('../asset/icons/html.svg');
+                    }
+                    .dir{
+                        @include icon('../asset/icons/folder.svg');
+                    }
+                    span{
+                        @include box(6.5vw, 3vh);
+                        text-align: center;
+                        text-overflow: ellipsis;
+                        line-height: 3vh;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.gitLog{
+    overflow: hidden;
+    word-wrap: break-word;
+    .echoVersion{
+        list-style: none;
+        width: 22vw;
+        font-weight: bold;
+        font-size: 0.13rem;
+        margin-bottom: 50px;
+        @include transition(all 500ms ease);
+        &:hover{
+            @include transform(scale(0.99));
+        }
+        span{
+            display: inline-block;
+        }
+        div{
+            line-height: 5vh;
+        }
+        .hashVersion{
+            user-select: all;
+            @include box(22vw, 12vh);
+            span:nth-child(0){
+                @include box(3vw, 3vw);
+            }
+        }
+        .author{
+            @include box(22vw, 5vh);
+        }
+        .date{
+            @include box(22vw, 5vh);
+        }
+        .commit_m{
+            width: 22vw;
+        }
+        .author{
+            @include box(22vw, 5vh);
+        }
+    }
+}
