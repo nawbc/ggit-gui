@@ -1,5 +1,3 @@
-# ggit@beta1.0.23-alpha0.3
-
 ## I'am a newbie. This app is just a try. And many functions are unable to use also includes bugs. 
 ## If you are interested, you can install to preview, use ggit start
 
