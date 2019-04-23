@@ -1,10 +1,9 @@
 const { spawn } = require('child_process');
-const { printErr } = require('./MrPrint');
 
 /**
-	* @return stdout stderr
-	* @param {Array} argv
-	*/
+* @return stdout stderr
+* @param {Array} argv
+*/
 
 exports.mrSpawn = (cmd, argv, options) => {
 	var temp = "";
