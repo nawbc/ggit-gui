@@ -7,7 +7,7 @@
 
 ```
     window + x -> windows powershell(A) 管理员权限
-    npm install ggit-npm-tool -g
+    npm install ggit-gui -g
 ```
 
 # usage 

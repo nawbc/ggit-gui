@@ -1,6 +1,6 @@
 {
   "name": "ggit-gui",
-  "version": "1.0.23-alpha0.25",
+  "version": "1.0.23-alpha0.28",
   "update": "2019/2/8",
   "description": "git的轻量化gui工具",
   "main": "index.js",
@@ -14,7 +14,7 @@
   "bin": {
     "ggit": "index.js"
   },
-  "author": "wanghan",
+  "author": "sewerganger",
   "license": "MIT",
   "dependencies": {
     "chalk": "^2.4.1",
@@ -30,6 +30,6 @@
   "bugs": "https://github.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sewerganger/ggit-npm-tool.git"
+    "url": "https://github.com/sewerganger/ggit-gui"
   }
 }
