@@ -3,6 +3,19 @@
 
 ##  我是名新手，软件仅仅是个尝试, 很多功能没有实现, 包括存在许多bug 如果你感兴趣,可以尝试一下, 使用ggit start启动
 
+
+# snapshots
+
+![logo](https://github.com/sewerganger/ggit-gui/blob/master/doc/v2-29170adfb1ea20ee6a955ee623d466a3_hd.jpg)
+
+![logo1](https://github.com/sewerganger/ggit-gui/blob/master/doc/v2-9425b3da0e97ff2d23b49ca0d77d3bf3_hd.jpg)
+
+![logo2](https://github.com/sewerganger/ggit-gui/blob/master/doc/v2-a2cce426de382e8e6da897c4b59530e6_hd.jpg)
+
+![logo3](https://github.com/sewerganger/ggit-gui/blob/master/doc/v2-b34fb9bd69c5ce51bf413844f000607a_hd.jpg)
+
+
+
 # installation 
 
 ```
