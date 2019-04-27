@@ -52,7 +52,7 @@ alt + 4 dark/黑夜模式
 2019/4/27
     offline reader markdown add highlight.js but highlight is something wrong/
     添加离线阅读项目, 但高亮显示还是有些问题
-    ![logo](https://github.com/sewerganger/ggit-gui/blob/master/doc/2019-04-27 120146.jpg)
+    ![logo](https://github.com/sewerganger/ggit-gui/blob/master/doc/908unad9-adas-0.jpg)
 
 ---------------------------------------------------------------------------------------
     2019/4/23
