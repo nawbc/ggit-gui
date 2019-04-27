@@ -53,7 +53,7 @@ module.exports = (port=1031, ip='localhost') => {
                 path = 'en' === data.toString() ? '/index?lang=en': '/index?lang=zh';
             }
             printOut(`ggit ${val('running on', '运行在')} ${addr}:${myPort} ${delayTime/1000}${val('\'s later skip webpage automatically  ','秒后自动跳转')}......\n`);
-            turnToBrowser(delayTime, addr, myPort, path);
+            // turnToBrowser(delayTime, addr, myPort, path);
         });
     })
 }

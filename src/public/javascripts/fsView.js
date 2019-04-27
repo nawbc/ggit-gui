@@ -124,6 +124,7 @@
      */
     FsView.prototype.createFileSystemHtml = (basePath, files, currentTree, callback) =>{
         var block = '', branch_a = window.sessionStorage.branch_a;
+        console.log(branch_a)
         var current = JSON.parse(branch_a);
         files.forEach((val) => {
             const url = [basePath, val[0]].join(filePath.Sep());

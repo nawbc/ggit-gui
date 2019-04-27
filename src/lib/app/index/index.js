@@ -9,10 +9,10 @@ const { platformOS } = require('../../utils/comfortableBrowser');
 const val = require('../../utils/language');
 
 const { 
-    repository, 
     title, 
     name, 
     version, 
+    repository, 
     description,
     update,
     license,
