@@ -1,6 +1,6 @@
 ﻿{
   "name": "ggit-gui",
-  "version": "1.0.23-alpha0.30",
+  "version": "1.0.23-alpha0.31",
   "update": "2019/2/8",
   "description": "git的轻量化gui工具",
   "main": "index.js",
