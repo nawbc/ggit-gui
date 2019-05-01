@@ -3,18 +3,18 @@
 
 ------
 
-##  我是名新手，软件仅仅是个尝试, 很多功能没有实现, 包括存在许多bug 如果你感兴趣,可以尝试一下, 使用`ggit start`启动
+## 软件仅仅是个尝试, 很多功能没有实现, 包括存在许多bug 如果你感兴趣,可以尝试一下, 使用`ggit start`启动
 
 
 # snapshots
 
-![logo](https://github.com/sewerganger/ggit-gui/blob/master/doc/v2-29170adfb1ea20ee6a955ee623d466a3_hd.jpg)
+![logo](https://raw.githubusercontent.com/sewerganger/ggit-gui/master/doc/v2-29170adfb1ea20ee6a955ee623d466a3_hd.jpg)
 
-![logo1](https://github.com/sewerganger/ggit-gui/blob/master/doc/v2-9425b3da0e97ff2d23b49ca0d77d3bf3_hd.jpg)
+![logo1](https://raw.githubusercontent.com/sewerganger/ggit-gui/master/doc/v2-9425b3da0e97ff2d23b49ca0d77d3bf3_hd.jpg)
 
-![logo2](https://github.com/sewerganger/ggit-gui/blob/master/doc/v2-a2cce426de382e8e6da897c4b59530e6_hd.jpg)
+![logo2](https://raw.githubusercontent.com/sewerganger/ggit-gui/master/doc/v2-a2cce426de382e8e6da897c4b59530e6_hd.jpg)
 
-![logo3](https://github.com/sewerganger/ggit-gui/blob/master/doc/v2-b34fb9bd69c5ce51bf413844f000607a_hd.jpg)
+![logo3](https://raw.githubusercontent.com/sewerganger/ggit-gui/master/doc/v2-b34fb9bd69c5ce51bf413844f000607a_hd.jpg)
 
 
 
@@ -49,10 +49,10 @@ alt + 4 dark/黑夜模式
 # histories
 
 ---------------------------------------------------------------------------------------
-2019/4/27
+    2019/4/27
     offline reader markdown add highlight.js but highlight is something wrong/
     添加离线阅读项目, 但高亮显示还是有些问题
-    ![logo](https://github.com/sewerganger/ggit-gui/blob/master/doc/2019-04-27 120146.jpg)
+![logow](https://raw.githubusercontent.com/sewerganger/ggit-gui/master/doc/121933.jpg)
 
 ---------------------------------------------------------------------------------------
     2019/4/23

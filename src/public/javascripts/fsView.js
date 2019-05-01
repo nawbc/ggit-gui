@@ -122,12 +122,14 @@
      * @param { Array } files [['xxx', 'xxx', '2018/321/132']]
      * @param { String } currentTree 
      */
+
     FsView.prototype.createFileSystemHtml = (basePath, files, currentTree, callback) =>{
         var block = '', branch_a = window.sessionStorage.branch_a;
-        console.log(branch_a)
         var current = JSON.parse(branch_a);
+        console.log(files)
         files.forEach((val) => {
             const url = [basePath, val[0]].join(filePath.Sep());
+
             const a = 'file' === val[1] ? fsView.handleFileExtName(val[0]) : 'dir';
             block += `<li title="${url}" class="fileBlock">
                                 <div>${val[2]}</div>

@@ -99,6 +99,7 @@
             callback(data);
         })
     }
+
     //查看工作区
     LocalRepo.prototype.checkWorkStation = (src) => {
         localRepo.getBranchs(src, (data)=>{
@@ -148,23 +149,24 @@
     }
     // 转换成fsView createFileSystemHtml 可读的数据形式
     LocalRepo.prototype.transfsViewReadable = (state) => {
-        console.log(state);
+
         let tempStageFiles = [];
         for(let prop in state){
             state[prop].forEach((val)=>{
+                //writehere
                 let kind = /\\|\//g.test(val)? 'dir': 'file';
                 tempStageFiles.push([val, kind, localRepo.handleFilesStatus(prop)]);
             })
         }
         return tempStageFiles;
     }
+    
     // 显示缓存区文件
     LocalRepo.prototype.displayStageHtml = (data)=>{
         $('.tinyWrapper').empty();
-        const readableDate = localRepo.transfsViewReadable(data),
-                        basePath = sessionStorage.currentItem,
-                        currentTree = switchLang('stage', '缓存区');
-        fsView.createFileSystemHtml(basePath,readableDate, currentTree);
+        const readableDate = localRepo.transfsViewReadable(data);
+        const basePath = sessionStorage.currentItem;
+        fsView.createFileSystemHtml(basePath,readableDate, switchLang('stage', '缓存区'));
     }
 
     // 查看缓存区 请求缓存区
@@ -174,7 +176,7 @@
         }, function (data) {
             if (1 === data.code) {
                 console.log(data)
-                // localRepo.displayStageHtml(daxta.srv_msg);
+                // localRepo.displayStageHtml(data.srv_msg);
             } else {
                 utils.ggitNotification(data.err_msg, true, 3000);
             }
